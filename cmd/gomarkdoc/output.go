@@ -11,7 +11,6 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/princjef/termdiff"
 	"github.com/sergi/go-diff/diffmatchpatch"
 	"github.com/umats/gomarkdoc"
 	"github.com/umats/gomarkdoc/lang"
@@ -135,15 +134,7 @@ func checkFile(b *bytes.Buffer, path string) error {
 	}
 
 	if len(filtered) != 0 {
-		diffs := termdiff.DiffsFromDiffMatchPatch(diff)
-		fmt.Fprintln(os.Stderr)
-		termdiff.Fprint(
-			os.Stderr,
-			path,
-			diffs,
-			termdiff.WithBeforeText("(expected)"),
-			termdiff.WithAfterText("(actual)"),
-		)
+		fmt.Fprintf(os.Stderr, "\n%s - (expected) (actual)\n%s\n", path, differ.DiffPrettyText(diff))
 		return checkErr
 	}
 
