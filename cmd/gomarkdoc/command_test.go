@@ -1,3 +1,4 @@
+//nolint:depguard,gochecknoglobals,lll,reassign,usetesting // This legacy implementation intentionally relies on these patterns.
 package main
 
 import (
@@ -405,12 +406,11 @@ func cleanup(t *testing.T, dir string) {
 		}
 
 		os.Remove(filepath.Join(dir, n.Name()))
-
 	}
 }
 
 // harness runs the test for all formats. Omit the --output and --format args to
-// the command when running this as it will fill them in for you
+// the command when running this as it will fill them in for you.
 func harness(t *testing.T, dir string, args []string) {
 	for _, format := range []string{"plain", "github", "azure-devops"} {
 		os.Args = args

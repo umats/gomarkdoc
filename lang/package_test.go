@@ -1,3 +1,4 @@
+//nolint:lll,usetesting // This legacy test changes the working directory to exercise dot imports.
 package lang_test
 
 import (

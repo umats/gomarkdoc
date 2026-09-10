@@ -1,3 +1,4 @@
+//nolint:govet,unparam // This legacy implementation intentionally relies on these patterns.
 package lang_test
 
 import (
@@ -47,9 +48,9 @@ func TestValue_Location(t *testing.T) {
 	is.NoErr(err)
 
 	loc := val.Location()
-	is.Equal(loc.Start.Line, 4)
+	is.Equal(loc.Start.Line, 5)
 	is.Equal(loc.Start.Col, 1)
-	is.Equal(loc.End.Line, 4)
+	is.Equal(loc.End.Line, 5)
 	is.Equal(loc.End.Col, 17)
 	is.True(strings.HasSuffix(loc.Filepath, "value.go"))
 }

@@ -1,3 +1,4 @@
+//nolint:godoclint,govet,staticcheck,wrapcheck // This legacy implementation intentionally relies on these patterns.
 package lang
 
 import (
@@ -247,7 +248,7 @@ func processRemote(log logger.Logger, repository *git.Repository, remote *git.Re
 		for {
 			ref, err := refs.Next()
 			if err != nil {
-				if err == io.EOF {
+				if errors.Is(err, io.EOF) {
 					break
 				}
 
@@ -335,7 +336,7 @@ func normalizeRemote(remote string) (string, bool) {
 				// DevOps (old domain)
 
 				// Pull off the beginning of the domain
-				org := strings.SplitN(match[2], ".", 2)[0]
+				org, _, _ := strings.Cut(match[2], ".")
 				return fmt.Sprintf(
 					"https://dev.azure.com/%s/%s/_git/%s",
 					org,

@@ -1,3 +1,4 @@
+//nolint:gochecknoglobals,mnd // This legacy implementation intentionally relies on these patterns.
 package formatcore
 
 import (
@@ -11,7 +12,7 @@ import (
 	"mvdan.cc/xurls/v2"
 )
 
-// Bold converts the provided text to bold
+// Bold converts the provided text to bold.
 func Bold(text string) string {
 	if text == "" {
 		return ""

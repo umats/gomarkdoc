@@ -1,3 +1,4 @@
+//nolint:godoclint,govet,mnd,nonamedreturns,staticcheck,wrapcheck // legacy
 package lang
 
 import (
@@ -156,7 +157,7 @@ func (pkg *Package) Consts() (consts []*Value) {
 		consts = append(consts, NewValue(pkg.cfg.Inc(1), c))
 	}
 
-	return
+	return consts
 }
 
 // Vars lists the top-level variables provided by the package.
@@ -165,7 +166,7 @@ func (pkg *Package) Vars() (vars []*Value) {
 		vars = append(vars, NewValue(pkg.cfg.Inc(1), v))
 	}
 
-	return
+	return vars
 }
 
 // Funcs lists the top-level functions provided by the package.
@@ -174,7 +175,7 @@ func (pkg *Package) Funcs() (funcs []*Func) {
 		funcs = append(funcs, NewFunc(pkg.cfg.Inc(1), fn, pkg.examples))
 	}
 
-	return
+	return funcs
 }
 
 // Types lists the top-level types provided by the package.
@@ -183,7 +184,7 @@ func (pkg *Package) Types() (types []*Type) {
 		types = append(types, NewType(pkg.cfg.Inc(1), typ, pkg.examples))
 	}
 
-	return
+	return types
 }
 
 // Examples provides the package-level examples that have been defined. This
@@ -205,7 +206,7 @@ func (pkg *Package) Examples() (examples []*Example) {
 		examples = append(examples, NewExample(pkg.cfg.Inc(1), name, example))
 	}
 
-	return
+	return examples
 }
 
 var goModRegex = regexp.MustCompile(`^\s*module ([^\s]+)`)

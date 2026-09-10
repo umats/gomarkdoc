@@ -57,7 +57,7 @@ func (s *Span) URL() string {
 	return s.url
 }
 
-// ParseSpans turns a set of *comment.Text entries into a slice of spans.
+// ParseSpans turns a set of *[comment.Text] entries into a slice of spans.
 func ParseSpans(cfg *Config, texts []comment.Text) []*Span {
 	var s []*Span
 	for _, t := range texts {

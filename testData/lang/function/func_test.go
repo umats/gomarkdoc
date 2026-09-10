@@ -1,3 +1,4 @@
+//nolint:testableexamples // This legacy implementation intentionally relies on these patterns.
 package function_test
 
 import (

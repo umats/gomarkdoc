@@ -1,3 +1,4 @@
+//nolint:mnd,wrapcheck // This legacy implementation intentionally relies on these patterns.
 package lang
 
 import (
@@ -63,7 +64,7 @@ func (ex *Example) Doc() *Doc {
 
 // Code provides the raw text code representation of the example's contents.
 func (ex *Example) Code() (string, error) {
-	var codeNode interface{}
+	var codeNode any
 	if ex.doc.Play != nil {
 		codeNode = ex.doc.Play
 	} else {

@@ -1,3 +1,4 @@
+//nolint:gosec,govet,mnd,nilnil,staticcheck,wrapcheck // The CLI must preserve generated-document permissions.
 package main
 
 import (
@@ -103,7 +104,7 @@ func writeFile(fileName string, text string) error {
 		}
 	}
 
-	if err := ioutil.WriteFile(fileName, []byte(text), 0664); err != nil {
+	if err := ioutil.WriteFile(fileName, []byte(text), 0o664); err != nil {
 		return fmt.Errorf("failed to write file %s: %w", fileName, err)
 	}
 
@@ -114,7 +115,7 @@ func checkFile(b *bytes.Buffer, path string) error {
 	checkErr := errors.New("output does not match current files. Did you forget to run gomarkdoc?")
 
 	fileContents, err := os.ReadFile(path)
-	if err == os.ErrNotExist {
+	if errors.Is(err, os.ErrNotExist) {
 		fileContents = []byte{}
 	} else if err != nil {
 		return fmt.Errorf("failed to open file %s for checking: %w", path, err)

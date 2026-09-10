@@ -6,7 +6,7 @@ type AnotherStruct struct {
 	Field string
 }
 
-// NewAnotherStruct() makes [*AnotherStruct].
+// NewAnotherStruct makes [*AnotherStruct].
 func NewAnotherStruct() *AnotherStruct {
 	return &AnotherStruct{
 		Field: "test",

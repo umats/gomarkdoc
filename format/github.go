@@ -1,3 +1,4 @@
+//nolint:wrapcheck // This legacy implementation intentionally relies on these patterns.
 package format
 
 import (
@@ -16,7 +17,7 @@ import (
 // https://guides.github.com/features/mastering-markdown/
 type GitHubFlavoredMarkdown struct{}
 
-// Bold converts the provided text to bold
+// Bold converts the provided text to bold.
 func (f *GitHubFlavoredMarkdown) Bold(text string) (string, error) {
 	return formatcore.Bold(text), nil
 }

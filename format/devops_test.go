@@ -1,3 +1,4 @@
+//nolint:lll // This legacy implementation intentionally relies on these patterns.
 package format_test
 
 import (

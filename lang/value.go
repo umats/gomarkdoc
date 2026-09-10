@@ -11,7 +11,7 @@ type Value struct {
 }
 
 // NewValue creates a new Value from the raw const or var documentation and the
-// token.FileSet of files for the containing package.
+// [token.FileSet] of files for the containing package.
 func NewValue(cfg *Config, doc *doc.Value) *Value {
 	return &Value{cfg, doc}
 }

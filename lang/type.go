@@ -1,3 +1,4 @@
+//nolint:godoclint,nonamedreturns // This legacy implementation intentionally relies on these patterns.
 package lang
 
 import (
@@ -26,7 +27,7 @@ func (typ *Type) Level() int {
 	return typ.cfg.Level
 }
 
-// Name provides the name of the type
+// Name provides the name of the type.
 func (typ *Type) Name() string {
 	return typ.doc.Name
 }
@@ -80,7 +81,7 @@ func (typ *Type) Examples() (examples []*Example) {
 		examples = append(examples, NewExample(typ.cfg.Inc(1), name, example))
 	}
 
-	return
+	return examples
 }
 
 func (typ *Type) isSubexample(exampleName string) bool {

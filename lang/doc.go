@@ -23,7 +23,7 @@ func NewDoc(cfg *Config, text string) *Doc {
 }
 
 // Level provides the default level that headers within the documentation should
-// be rendered
+// be rendered.
 func (d *Doc) Level() int {
 	return d.cfg.Level
 }

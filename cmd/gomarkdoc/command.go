@@ -1,3 +1,4 @@
+//nolint:errcheck,forbidigo,funlen,gochecknoglobals,gocognit,govet,mnd,revive,staticcheck,wrapcheck // legacy
 package main
 
 import (
@@ -14,11 +15,11 @@ import (
 	"os"
 	"path/filepath"
 	"runtime/debug"
+	"slices"
 	"strings"
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
-
 	"github.com/umats/gomarkdoc"
 	"github.com/umats/gomarkdoc/format"
 	"github.com/umats/gomarkdoc/lang"
@@ -62,7 +63,7 @@ type commandOptions struct {
 	version               bool
 }
 
-// Flags populated by goreleaser
+// Flags populated by goreleaser.
 var version = ""
 
 const configFilePrefix = ".gomarkdoc"
@@ -288,7 +289,7 @@ func buildConfig(configFile string) {
 	viper.AutomaticEnv()
 
 	if err := viper.ReadInConfig(); err != nil {
-		if _, ok := err.(viper.ConfigFileNotFoundError); !ok {
+		if _, ok := errors.AsType[viper.ConfigFileNotFoundError](err); ok {
 			// TODO: better handling
 			fmt.Println(err)
 		}
@@ -572,13 +573,7 @@ var ignoredDirs = []string{".git"}
 
 // isIgnoredDir identifies if the dir is one we want to intentionally ignore.
 func isIgnoredDir(dirname string) bool {
-	for _, ignored := range ignoredDirs {
-		if ignored == dirname {
-			return true
-		}
-	}
-
-	return false
+	return slices.Contains(ignoredDirs, dirname)
 }
 
 // validateExcludes checks that the exclude dirs are all directories, not

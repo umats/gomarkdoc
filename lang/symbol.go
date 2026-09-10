@@ -1,3 +1,4 @@
+//nolint:exhaustive // This legacy implementation intentionally relies on these patterns.
 package lang
 
 import (
@@ -151,7 +152,6 @@ func typeSymbols(sym map[string]Symbol, t *doc.Type) {
 			}
 		}
 	}
-
 }
 
 // Anchor produces anchor text for the symbol.

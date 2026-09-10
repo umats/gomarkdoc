@@ -1,3 +1,4 @@
+//nolint:mnd,revive,wrapcheck // This legacy implementation intentionally relies on these patterns.
 package format
 
 import (
@@ -11,7 +12,7 @@ import (
 // format specification.
 type PlainMarkdown struct{}
 
-// Bold converts the provided text to bold
+// Bold converts the provided text to bold.
 func (f *PlainMarkdown) Bold(text string) (string, error) {
 	return formatcore.Bold(text), nil
 }
