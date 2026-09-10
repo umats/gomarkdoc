@@ -8,10 +8,10 @@ import (
 	"testing"
 
 	"github.com/matryer/is"
-	"github.com/princjef/gomarkdoc"
-	"github.com/princjef/gomarkdoc/format/formatcore"
-	"github.com/princjef/gomarkdoc/lang"
-	"github.com/princjef/gomarkdoc/logger"
+	"github.com/umats/gomarkdoc"
+	"github.com/umats/gomarkdoc/format/formatcore"
+	"github.com/umats/gomarkdoc/lang"
+	"github.com/umats/gomarkdoc/logger"
 )
 
 func TestWithTemplateFunc(t *testing.T) {

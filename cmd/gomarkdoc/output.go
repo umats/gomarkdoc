@@ -10,11 +10,11 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/princjef/gomarkdoc"
-	"github.com/princjef/gomarkdoc/lang"
-	"github.com/princjef/gomarkdoc/logger"
 	"github.com/princjef/termdiff"
 	"github.com/sergi/go-diff/diffmatchpatch"
+	"github.com/umats/gomarkdoc"
+	"github.com/umats/gomarkdoc/lang"
+	"github.com/umats/gomarkdoc/logger"
 )
 
 func writeOutput(specs []*PackageSpec, opts commandOptions) error {

@@ -3,8 +3,8 @@ package format
 import (
 	"fmt"
 
-	"github.com/princjef/gomarkdoc/format/formatcore"
-	"github.com/princjef/gomarkdoc/lang"
+	"github.com/umats/gomarkdoc/format/formatcore"
+	"github.com/umats/gomarkdoc/lang"
 )
 
 // PlainMarkdown provides a Format which is compatible with the base Markdown
