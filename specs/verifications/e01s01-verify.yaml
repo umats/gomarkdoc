@@ -1,0 +1,22 @@
+story_id: e01s01
+verified_at: "2026-09-10T12:45:00+02:00"
+verifier: verify-work
+phases:
+  cli_smoke:
+    passed: true
+    command: "./bin/gomarkdoc --format gitlab ..."
+  tests:
+    passed: true
+    command: "task preflight"
+  docs:
+    passed: true
+    command: "task doc:verify"
+  terminal_verdict:
+    command: "task preflight"
+    exit_code: 0
+    note: "Single terminal run after the GitLab line-range fix."
+  manual:
+    passed: true
+    note: "User confirmed that generated GitLab documentation and source links work."
+  gaps:
+    closed: true

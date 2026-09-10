@@ -1,0 +1,21 @@
+development_status:
+  e01: verify
+  e01s01: verify
+
+epics:
+  e01:
+    status: verify
+    title: GitLab Markdown format
+    wsjf: 3.0
+    total_bcps: 4
+
+stories:
+  e01s01:
+    status: verify
+    title: Add GitLab output format
+    bcps: 4
+    epic: e01
+    tasks_total: 3
+    tasks_passing: 3
+    tasks_failing: 0
+    risk_max: P1

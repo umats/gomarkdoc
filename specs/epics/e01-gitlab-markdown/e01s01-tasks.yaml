@@ -1,0 +1,31 @@
+story_id: e01s01
+title: Add GitLab output format
+spec: e01s01-gitlab-format.md
+status: passing
+bcps: 4
+risk: P1
+tasks:
+  - id: 1
+    description: Add focused GitLab formatter tests for anchors and repository source links.
+    verify: go test ./format -run '^TestGitLabFlavoredMarkdown'
+    risk: P1
+    status: passing
+    allure:
+      severity: high
+      categories: [unit, gitlab-markdown]
+  - id: 2
+    description: Add the GitLab format and select it from the existing CLI format switch.
+    verify: go test ./format ./cmd/gomarkdoc
+    risk: P1
+    status: passing
+    allure:
+      severity: high
+      categories: [unit, integration, gitlab-markdown]
+  - id: 3
+    description: Add GitLab to the CLI format fixture harness and regenerate expected output.
+    verify: task preflight
+    risk: P1
+    status: passing
+    allure:
+      severity: high
+      categories: [integration, regression, gitlab-markdown]

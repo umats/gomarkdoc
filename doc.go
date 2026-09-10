@@ -31,7 +31,7 @@
 //	      --exclude-dirs strings               List of package directories to ignore when producing documentation.
 //	      --footer string                      Additional content to inject at the end of each output file.
 //	      --footer-file string                 File containing additional content to inject at the end of each output file.
-//	  -f, --format string                      Format to use for writing output data. Valid options: github (default), azure-devops, plain (default "github")
+//	  -f, --format string                      Format to use for writing output data. Valid options: github (default), gitlab, azure-devops, plain (default "github")
 //	      --header string                      Additional content to inject at the beginning of each output file.
 //	      --header-file string                 File containing additional content to inject at the beginning of each output file.
 //	  -h, --help                               help for gomarkdoc
@@ -99,6 +99,16 @@
 // You can see all of the data available to the output template in the
 // PackageSpec struct in the github.com/umats/gomarkdoc/cmd/gomarkdoc
 // package.
+//
+// # GitLab Output
+//
+// Use the gitlab format for GitLab.com and self-hosted GitLab instances. It
+// generates GitLab heading links and source links.
+//
+//	gomarkdoc --format gitlab --output '{{.Dir}}/README.md' ./...
+//
+// For source links, use a GitLab remote or set --repository.url,
+// --repository.default-branch, and --repository.path.
 //
 // # Template Overrides
 //

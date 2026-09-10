@@ -1,0 +1,13 @@
+id: e01
+title: GitLab Markdown format
+wsjf: 3.0
+total_bcps: 4
+status: verify
+stories:
+  - id: e01s01
+    title: Add GitLab output format
+    bcps: 4
+    status: verify
+    spec: e01s01-gitlab-format.md
+    tasks: e01s01-tasks.yaml
+    delta: ADDED

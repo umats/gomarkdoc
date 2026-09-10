@@ -41,6 +41,21 @@ func TestCommand(t *testing.T) {
 	}
 }
 
+func TestLoadPackagesSkipsTestOnlyPackage(t *testing.T) {
+	is := is.New(t)
+
+	dir := filepath.Join(t.TempDir(), "client")
+	is.NoErr(os.Mkdir(dir, 0755))
+	is.NoErr(os.WriteFile(filepath.Join(dir, "client_test.go"), []byte("package client_test\n"), 0600))
+
+	is.NoErr(loadPackages([]*PackageSpec{{
+		Dir:        dir,
+		ImportPath: dir,
+		isWildcard: true,
+		isLocal:    true,
+	}}, commandOptions{}))
+}
+
 func TestCommand_check(t *testing.T) {
 	is := is.New(t)
 
@@ -412,7 +427,7 @@ func cleanup(t *testing.T, dir string) {
 // harness runs the test for all formats. Omit the --output and --format args to
 // the command when running this as it will fill them in for you.
 func harness(t *testing.T, dir string, args []string) {
-	for _, format := range []string{"plain", "github", "azure-devops"} {
+	for _, format := range []string{"plain", "github", "gitlab", "azure-devops"} {
 		os.Args = args
 		os.Args = append(os.Args, "-o", fmt.Sprintf("{{.Dir}}/README-%s-test.md", format))
 		os.Args = append(os.Args, "--format", format)
