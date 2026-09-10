@@ -17,7 +17,7 @@ See https://github.com/umats/gomarkdoc for full documentation of this tool.
 
 
 <a name="PackageSpec"></a>
-## type [PackageSpec](<https://github.com/umats/gomarkdoc/blob/master/cmd/gomarkdoc/command.go#L31-L45>)
+## type [PackageSpec](<https://github.com/umats/gomarkdoc/blob/main/cmd/gomarkdoc/command.go#L31-L45>)
 
 PackageSpec defines the data available to the \-\-output option's template. Information is recomputed for each package generated.
 

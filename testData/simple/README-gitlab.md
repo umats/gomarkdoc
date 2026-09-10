@@ -17,7 +17,7 @@ Package simple contains, some simple code to exercise basic scenarios for docume
 
 
 <a name="Num"></a>
-## type [Num](<https://github.com/umats/gomarkdoc/-/blob/master/testData/simple/main.go#L8>)
+## type [Num](<https://github.com/umats/gomarkdoc/-/blob/main/testData/simple/main.go#L8>)
 
 Num is a number.
 
@@ -28,7 +28,7 @@ type Num int
 ```
 
 <a name="AddNums"></a>
-### func [AddNums](<https://github.com/umats/gomarkdoc/-/blob/master/testData/simple/main.go#L16>)
+### func [AddNums](<https://github.com/umats/gomarkdoc/-/blob/main/testData/simple/main.go#L16>)
 
 ```go
 func AddNums(num1, num2 Num) Num
@@ -37,7 +37,7 @@ func AddNums(num1, num2 Num) Num
 AddNums adds two Nums together.
 
 <a name="Num.Add"></a>
-### func \(Num\) [Add](<https://github.com/umats/gomarkdoc/-/blob/master/testData/simple/main.go#L11>)
+### func \(Num\) [Add](<https://github.com/umats/gomarkdoc/-/blob/main/testData/simple/main.go#L11>)
 
 ```go
 func (n Num) Add(num Num) Num

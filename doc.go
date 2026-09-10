@@ -216,7 +216,7 @@
 // --repository.default-branch and --repository.path options. For example, this
 // repository would be configured with:
 //
-//	gomarkdoc --repository.url "https://github.com/umats/gomarkdoc" --repository.default-branch master --repository.path / -o README.md .
+//	gomarkdoc --repository.url "https://github.com/umats/gomarkdoc" --repository.default-branch main --repository.path / -o README.md .
 //
 // # Configuring via File
 //

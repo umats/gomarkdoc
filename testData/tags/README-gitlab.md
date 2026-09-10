@@ -16,7 +16,7 @@ Package tags contains code to demonstrate usage of build tags.
 
 
 <a name="Tagged"></a>
-## func [Tagged](<https://github.com/umats/gomarkdoc/-/blob/master/testData/tags/tagged.go#L7>)
+## func [Tagged](<https://github.com/umats/gomarkdoc/-/blob/main/testData/tags/tagged.go#L7>)
 
 ```go
 func Tagged() int
@@ -25,7 +25,7 @@ func Tagged() int
 Tagged is only visible with tags.
 
 <a name="Untagged"></a>
-## func [Untagged](<https://github.com/umats/gomarkdoc/-/blob/master/testData/tags/untagged.go#L7>)
+## func [Untagged](<https://github.com/umats/gomarkdoc/-/blob/main/testData/tags/untagged.go#L7>)
 
 ```go
 func Untagged() int

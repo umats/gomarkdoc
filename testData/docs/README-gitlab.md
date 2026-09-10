@@ -113,7 +113,7 @@ var Var = 2
 ```
 
 <a name="Func"></a>
-## func [Func](<https://github.com/umats/gomarkdoc/-/blob/master/testData/docs/docs.go#L67>)
+## func [Func](<https://github.com/umats/gomarkdoc/-/blob/main/testData/docs/docs.go#L67>)
 
 ```go
 func Func(param int) int
@@ -122,7 +122,7 @@ func Func(param int) int
 Func is present in this file.
 
 <a name="AnotherStruct"></a>
-## type [AnotherStruct](<https://github.com/umats/gomarkdoc/-/blob/master/testData/docs/anotherFile.go#L5-7>)
+## type [AnotherStruct](<https://github.com/umats/gomarkdoc/-/blob/main/testData/docs/anotherFile.go#L5-7>)
 
 AnotherStruct has methods like [\\\*AnotherStruct.GetField](<#AnotherStruct.GetField>) and also has an initializer called [NewAnotherStruct](<#NewAnotherStruct>).
 
@@ -133,7 +133,7 @@ type AnotherStruct struct {
 ```
 
 <a name="NewAnotherStruct"></a>
-### func [NewAnotherStruct](<https://github.com/umats/gomarkdoc/-/blob/master/testData/docs/anotherFile.go#L10>)
+### func [NewAnotherStruct](<https://github.com/umats/gomarkdoc/-/blob/main/testData/docs/anotherFile.go#L10>)
 
 ```go
 func NewAnotherStruct() *AnotherStruct
@@ -142,7 +142,7 @@ func NewAnotherStruct() *AnotherStruct
 NewAnotherStruct makes [\\\*AnotherStruct](<#AnotherStruct>).
 
 <a name="AnotherStruct.GetField"></a>
-### func \(\*AnotherStruct\) [GetField](<https://github.com/umats/gomarkdoc/-/blob/master/testData/docs/anotherFile.go#L17>)
+### func \(\*AnotherStruct\) [GetField](<https://github.com/umats/gomarkdoc/-/blob/main/testData/docs/anotherFile.go#L17>)
 
 ```go
 func (s *AnotherStruct) GetField() string
@@ -151,7 +151,7 @@ func (s *AnotherStruct) GetField() string
 GetField gets [\\\*AnotherStruct.Field](<#AnotherStruct>).
 
 <a name="Type"></a>
-## type [Type](<https://github.com/umats/gomarkdoc/-/blob/master/testData/docs/docs.go#L72>)
+## type [Type](<https://github.com/umats/gomarkdoc/-/blob/main/testData/docs/docs.go#L72>)
 
 Type is a type in this file.
 
@@ -160,7 +160,7 @@ type Type struct{}
 ```
 
 <a name="Type.Func"></a>
-### func \(\*Type\) [Func](<https://github.com/umats/gomarkdoc/-/blob/master/testData/docs/docs.go#L75>)
+### func \(\*Type\) [Func](<https://github.com/umats/gomarkdoc/-/blob/main/testData/docs/docs.go#L75>)
 
 ```go
 func (t *Type) Func()

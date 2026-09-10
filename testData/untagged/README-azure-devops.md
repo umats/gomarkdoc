@@ -15,7 +15,7 @@ Package untagged contains code to demonstrate usage of build tags.
 
 
 <a name="Untagged"></a>
-## func [Untagged](<https://github.com/umats/gomarkdoc?path=testData%2Funtagged%2Funtagged.go&version=GBmaster&lineStyle=plain&line=7&lineEnd=7&lineStartColumn=1&lineEndColumn=20>)
+## func [Untagged](<https://github.com/umats/gomarkdoc?path=testData%2Funtagged%2Funtagged.go&version=GBmain&lineStyle=plain&line=7&lineEnd=7&lineStartColumn=1&lineEndColumn=20>)
 
 ```go
 func Untagged() int

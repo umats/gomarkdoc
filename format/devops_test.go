@@ -132,12 +132,12 @@ func TestCodeHref(t *testing.T) {
 		WorkDir:  wd,
 		Repo: &lang.Repo{
 			Remote:        "https://dev.azure.com/org/project/_git/repo",
-			DefaultBranch: "master",
+			DefaultBranch: "main",
 			PathFromRoot:  "/",
 		},
 	})
 	is.NoErr(err)
-	is.Equal(res, "https://dev.azure.com/org/project/_git/repo?path=subdir%2Ffile.go&version=GBmaster&lineStyle=plain&line=12&lineEnd=14&lineStartColumn=1&lineEndColumn=43")
+	is.Equal(res, "https://dev.azure.com/org/project/_git/repo?path=subdir%2Ffile.go&version=GBmain&lineStyle=plain&line=12&lineEnd=14&lineStartColumn=1&lineEndColumn=43")
 }
 
 func TestCodeHref_noRepo(t *testing.T) {

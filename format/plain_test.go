@@ -119,7 +119,7 @@ func TestPlainMarkdown_CodeHref(t *testing.T) {
 		WorkDir:  wd,
 		Repo: &lang.Repo{
 			Remote:        "https://dev.azure.com/org/project/_git/repo",
-			DefaultBranch: "master",
+			DefaultBranch: "main",
 			PathFromRoot:  "/",
 		},
 	})

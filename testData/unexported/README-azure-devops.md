@@ -18,7 +18,7 @@ Package unexported contains some simple code to exercise basic scenarios for doc
 
 
 <a name="Num"></a>
-## type [Num](<https://github.com/umats/gomarkdoc?path=testData%2Funexported%2Fmain.go&version=GBmaster&lineStyle=plain&line=8&lineEnd=8&lineStartColumn=1&lineEndColumn=13>)
+## type [Num](<https://github.com/umats/gomarkdoc?path=testData%2Funexported%2Fmain.go&version=GBmain&lineStyle=plain&line=8&lineEnd=8&lineStartColumn=1&lineEndColumn=13>)
 
 Num is a number.
 
@@ -29,7 +29,7 @@ type Num int
 ```
 
 <a name="AddNums"></a>
-### func [AddNums](<https://github.com/umats/gomarkdoc?path=testData%2Funexported%2Fmain.go&version=GBmaster&lineStyle=plain&line=16&lineEnd=16&lineStartColumn=1&lineEndColumn=33>)
+### func [AddNums](<https://github.com/umats/gomarkdoc?path=testData%2Funexported%2Fmain.go&version=GBmain&lineStyle=plain&line=16&lineEnd=16&lineStartColumn=1&lineEndColumn=33>)
 
 ```go
 func AddNums(num1, num2 Num) Num
@@ -38,7 +38,7 @@ func AddNums(num1, num2 Num) Num
 AddNums adds two Nums together.
 
 <a name="addInternal"></a>
-### func [addInternal](<https://github.com/umats/gomarkdoc?path=testData%2Funexported%2Fmain.go&version=GBmaster&lineStyle=plain&line=21&lineEnd=21&lineStartColumn=1&lineEndColumn=37>)
+### func [addInternal](<https://github.com/umats/gomarkdoc?path=testData%2Funexported%2Fmain.go&version=GBmain&lineStyle=plain&line=21&lineEnd=21&lineStartColumn=1&lineEndColumn=37>)
 
 ```go
 func addInternal(num1, num2 Num) Num
@@ -47,7 +47,7 @@ func addInternal(num1, num2 Num) Num
 addInternal is a private version of AddNums.
 
 <a name="Num.Add"></a>
-### func \(Num\) [Add](<https://github.com/umats/gomarkdoc?path=testData%2Funexported%2Fmain.go&version=GBmaster&lineStyle=plain&line=11&lineEnd=11&lineStartColumn=1&lineEndColumn=30>)
+### func \(Num\) [Add](<https://github.com/umats/gomarkdoc?path=testData%2Funexported%2Fmain.go&version=GBmain&lineStyle=plain&line=11&lineEnd=11&lineStartColumn=1&lineEndColumn=30>)
 
 ```go
 func (n Num) Add(num Num) Num

@@ -40,7 +40,7 @@ var Variable = 5
 ```
 
 <a name="Standalone"></a>
-## func [Standalone](<https://github.com/umats/gomarkdoc/blob/master/testData/lang/function/func.go#L15>)
+## func [Standalone](<https://github.com/umats/gomarkdoc/blob/main/testData/lang/function/func.go#L15>)
 
 ```go
 func Standalone(p1 int, p2 string) (int, error)
@@ -119,7 +119,7 @@ func main() {
 </details>
 
 <a name="Generic"></a>
-## type [Generic](<https://github.com/umats/gomarkdoc/blob/master/testData/lang/function/func.go#L34>)
+## type [Generic](<https://github.com/umats/gomarkdoc/blob/main/testData/lang/function/func.go#L34>)
 
 Generic is a struct with a generic type.
 
@@ -128,7 +128,7 @@ type Generic[T any] struct{}
 ```
 
 <a name="Generic[T].WithGenericReceiver"></a>
-### func \(Generic\[T\]\) [WithGenericReceiver](<https://github.com/umats/gomarkdoc/blob/master/testData/lang/function/func.go#L37>)
+### func \(Generic\[T\]\) [WithGenericReceiver](<https://github.com/umats/gomarkdoc/blob/main/testData/lang/function/func.go#L37>)
 
 ```go
 func (r Generic[T]) WithGenericReceiver()
@@ -158,7 +158,7 @@ func main() {
 </details>
 
 <a name="Receiver"></a>
-## type [Receiver](<https://github.com/umats/gomarkdoc/blob/master/testData/lang/function/func.go#L20>)
+## type [Receiver](<https://github.com/umats/gomarkdoc/blob/main/testData/lang/function/func.go#L20>)
 
 Receiver is a type used to demonstrate functions with receivers.
 
@@ -213,7 +213,7 @@ func main() {
 </details>
 
 <a name="New"></a>
-### func [New](<https://github.com/umats/gomarkdoc/blob/master/testData/lang/function/func.go#L23>)
+### func [New](<https://github.com/umats/gomarkdoc/blob/main/testData/lang/function/func.go#L23>)
 
 ```go
 func New() Receiver
@@ -222,7 +222,7 @@ func New() Receiver
 New is an initializer for Receiver.
 
 <a name="Receiver.WithPtrReceiver"></a>
-### func \(\*Receiver\) [WithPtrReceiver](<https://github.com/umats/gomarkdoc/blob/master/testData/lang/function/func.go#L31>)
+### func \(\*Receiver\) [WithPtrReceiver](<https://github.com/umats/gomarkdoc/blob/main/testData/lang/function/func.go#L31>)
 
 ```go
 func (r *Receiver) WithPtrReceiver()
@@ -231,7 +231,7 @@ func (r *Receiver) WithPtrReceiver()
 WithPtrReceiver has a pointer receiver.
 
 <a name="Receiver.WithReceiver"></a>
-### func \(Receiver\) [WithReceiver](<https://github.com/umats/gomarkdoc/blob/master/testData/lang/function/func.go#L28>)
+### func \(Receiver\) [WithReceiver](<https://github.com/umats/gomarkdoc/blob/main/testData/lang/function/func.go#L28>)
 
 ```go
 func (r Receiver) WithReceiver()

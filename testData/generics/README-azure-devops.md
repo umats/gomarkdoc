@@ -16,7 +16,7 @@ import "github.com/umats/gomarkdoc/testData/generics"
 
 
 <a name="Func"></a>
-## func [Func](<https://github.com/umats/gomarkdoc?path=testData%2Fgenerics%2Fgenerics.go&version=GBmaster&lineStyle=plain&line=17&lineEnd=17&lineStartColumn=1&lineEndColumn=34>)
+## func [Func](<https://github.com/umats/gomarkdoc?path=testData%2Fgenerics%2Fgenerics.go&version=GBmain&lineStyle=plain&line=17&lineEnd=17&lineStartColumn=1&lineEndColumn=34>)
 
 ```go
 func Func[S int | float64](s S) S
@@ -25,7 +25,7 @@ func Func[S int | float64](s S) S
 Func is a generic function.
 
 <a name="Generic"></a>
-## type [Generic](<https://github.com/umats/gomarkdoc?path=testData%2Fgenerics%2Fgenerics.go&version=GBmaster&lineStyle=plain&line=4&lineEnd=6&lineStartColumn=1&lineEndColumn=2>)
+## type [Generic](<https://github.com/umats/gomarkdoc?path=testData%2Fgenerics%2Fgenerics.go&version=GBmain&lineStyle=plain&line=4&lineEnd=6&lineStartColumn=1&lineEndColumn=2>)
 
 Generic is a generic struct.
 
@@ -36,7 +36,7 @@ type Generic[T any] struct {
 ```
 
 <a name="NewGeneric"></a>
-### func [NewGeneric](<https://github.com/umats/gomarkdoc?path=testData%2Fgenerics%2Fgenerics.go&version=GBmaster&lineStyle=plain&line=9&lineEnd=9&lineStartColumn=1&lineEndColumn=43>)
+### func [NewGeneric](<https://github.com/umats/gomarkdoc?path=testData%2Fgenerics%2Fgenerics.go&version=GBmain&lineStyle=plain&line=9&lineEnd=9&lineStartColumn=1&lineEndColumn=43>)
 
 ```go
 func NewGeneric[T any](param T) Generic[T]
@@ -45,7 +45,7 @@ func NewGeneric[T any](param T) Generic[T]
 NewGeneric produces a new [Generic](<#Generic>) struct.
 
 <a name="Generic[T].Method"></a>
-### func \(Generic\[T\]\) [Method](<https://github.com/umats/gomarkdoc?path=testData%2Fgenerics%2Fgenerics.go&version=GBmaster&lineStyle=plain&line=14&lineEnd=14&lineStartColumn=1&lineEndColumn=29>)
+### func \(Generic\[T\]\) [Method](<https://github.com/umats/gomarkdoc?path=testData%2Fgenerics%2Fgenerics.go&version=GBmain&lineStyle=plain&line=14&lineEnd=14&lineStartColumn=1&lineEndColumn=29>)
 
 ```go
 func (g Generic[T]) Method()

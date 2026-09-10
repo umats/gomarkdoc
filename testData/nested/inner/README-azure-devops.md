@@ -13,7 +13,7 @@ import "github.com/umats/gomarkdoc/testData/nested/inner"
 
 
 <a name="Child"></a>
-## func [Child](<https://github.com/umats/gomarkdoc?path=testData%2Fnested%2Finner%2Fchild.go&version=GBmaster&lineStyle=plain&line=5&lineEnd=5&lineStartColumn=1&lineEndColumn=17>)
+## func [Child](<https://github.com/umats/gomarkdoc?path=testData%2Fnested%2Finner%2Fchild.go&version=GBmain&lineStyle=plain&line=5&lineEnd=5&lineStartColumn=1&lineEndColumn=17>)
 
 ```go
 func Child() int

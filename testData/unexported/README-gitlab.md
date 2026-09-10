@@ -18,7 +18,7 @@ Package unexported contains some simple code to exercise basic scenarios for doc
 
 
 <a name="Num"></a>
-## type [Num](<https://github.com/umats/gomarkdoc/-/blob/master/testData/unexported/main.go#L8>)
+## type [Num](<https://github.com/umats/gomarkdoc/-/blob/main/testData/unexported/main.go#L8>)
 
 Num is a number.
 
@@ -29,7 +29,7 @@ type Num int
 ```
 
 <a name="AddNums"></a>
-### func [AddNums](<https://github.com/umats/gomarkdoc/-/blob/master/testData/unexported/main.go#L16>)
+### func [AddNums](<https://github.com/umats/gomarkdoc/-/blob/main/testData/unexported/main.go#L16>)
 
 ```go
 func AddNums(num1, num2 Num) Num
@@ -38,7 +38,7 @@ func AddNums(num1, num2 Num) Num
 AddNums adds two Nums together.
 
 <a name="addInternal"></a>
-### func [addInternal](<https://github.com/umats/gomarkdoc/-/blob/master/testData/unexported/main.go#L21>)
+### func [addInternal](<https://github.com/umats/gomarkdoc/-/blob/main/testData/unexported/main.go#L21>)
 
 ```go
 func addInternal(num1, num2 Num) Num
@@ -47,7 +47,7 @@ func addInternal(num1, num2 Num) Num
 addInternal is a private version of AddNums.
 
 <a name="Num.Add"></a>
-### func \(Num\) [Add](<https://github.com/umats/gomarkdoc/-/blob/master/testData/unexported/main.go#L11>)
+### func \(Num\) [Add](<https://github.com/umats/gomarkdoc/-/blob/main/testData/unexported/main.go#L11>)
 
 ```go
 func (n Num) Add(num Num) Num

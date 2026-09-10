@@ -126,7 +126,7 @@ Package lang provides constructs for defining golang language constructs and ext
 
 
 <a name="PackageSymbols"></a>
-## func [PackageSymbols](<https://github.com/umats/gomarkdoc/blob/master/lang/symbol.go#L39>)
+## func [PackageSymbols](<https://github.com/umats/gomarkdoc/blob/main/lang/symbol.go#L39>)
 
 ```go
 func PackageSymbols(pkg *doc.Package) map[string]Symbol
@@ -135,7 +135,7 @@ func PackageSymbols(pkg *doc.Package) map[string]Symbol
 PackageSymbols gets the list of symbols for a doc package.
 
 <a name="Block"></a>
-## type [Block](<https://github.com/umats/gomarkdoc/blob/master/lang/block.go#L11-L17>)
+## type [Block](<https://github.com/umats/gomarkdoc/blob/main/lang/block.go#L11-L17>)
 
 Block defines a single block element \(e.g. paragraph, code block\) in the documentation for a symbol or package.
 
@@ -146,7 +146,7 @@ type Block struct {
 ```
 
 <a name="NewBlock"></a>
-### func [NewBlock](<https://github.com/umats/gomarkdoc/blob/master/lang/block.go#L41>)
+### func [NewBlock](<https://github.com/umats/gomarkdoc/blob/main/lang/block.go#L41>)
 
 ```go
 func NewBlock(cfg *Config, kind BlockKind, spans []*Span, inline bool) *Block
@@ -155,7 +155,7 @@ func NewBlock(cfg *Config, kind BlockKind, spans []*Span, inline bool) *Block
 NewBlock creates a new block element of the provided kind and with the given text spans and a flag indicating whether this block is part of an inline element.
 
 <a name="NewListBlock"></a>
-### func [NewListBlock](<https://github.com/umats/gomarkdoc/blob/master/lang/block.go#L48>)
+### func [NewListBlock](<https://github.com/umats/gomarkdoc/blob/main/lang/block.go#L48>)
 
 ```go
 func NewListBlock(cfg *Config, list *List, inline bool) *Block
@@ -164,7 +164,7 @@ func NewListBlock(cfg *Config, list *List, inline bool) *Block
 NewListBlock creates a new list block element and with the given list definition and a flag indicating whether this block is part of an inline element.
 
 <a name="ParseBlocks"></a>
-### func [ParseBlocks](<https://github.com/umats/gomarkdoc/blob/master/lang/block.go#L87>)
+### func [ParseBlocks](<https://github.com/umats/gomarkdoc/blob/main/lang/block.go#L87>)
 
 ```go
 func ParseBlocks(cfg *Config, blocks []comment.Block, inline bool) []*Block
@@ -173,7 +173,7 @@ func ParseBlocks(cfg *Config, blocks []comment.Block, inline bool) []*Block
 ParseBlocks produces a set of blocks from the corresponding comment blocks. It also takes a flag indicating whether the blocks are part of an inline element such as a list item.
 
 <a name="Block.Inline"></a>
-### func \(\*Block\) [Inline](<https://github.com/umats/gomarkdoc/blob/master/lang/block.go#L80>)
+### func \(\*Block\) [Inline](<https://github.com/umats/gomarkdoc/blob/main/lang/block.go#L80>)
 
 ```go
 func (b *Block) Inline() bool
@@ -182,7 +182,7 @@ func (b *Block) Inline() bool
 Inline indicates whether the block is part of an inline element, such as a list item.
 
 <a name="Block.Kind"></a>
-### func \(\*Block\) [Kind](<https://github.com/umats/gomarkdoc/blob/master/lang/block.go#L60>)
+### func \(\*Block\) [Kind](<https://github.com/umats/gomarkdoc/blob/main/lang/block.go#L60>)
 
 ```go
 func (b *Block) Kind() BlockKind
@@ -191,7 +191,7 @@ func (b *Block) Kind() BlockKind
 Kind provides the kind of data that this block's text should be interpreted as.
 
 <a name="Block.Level"></a>
-### func \(\*Block\) [Level](<https://github.com/umats/gomarkdoc/blob/master/lang/block.go#L54>)
+### func \(\*Block\) [Level](<https://github.com/umats/gomarkdoc/blob/main/lang/block.go#L54>)
 
 ```go
 func (b *Block) Level() int
@@ -200,7 +200,7 @@ func (b *Block) Level() int
 Level provides the default level that a block of kind HeaderBlock will render at in the output. The level is not used for other block types.
 
 <a name="Block.List"></a>
-### func \(\*Block\) [List](<https://github.com/umats/gomarkdoc/blob/master/lang/block.go#L74>)
+### func \(\*Block\) [List](<https://github.com/umats/gomarkdoc/blob/main/lang/block.go#L74>)
 
 ```go
 func (b *Block) List() *List
@@ -209,7 +209,7 @@ func (b *Block) List() *List
 List provides the list contents for a list block. Only relevant for blocks of type ListBlock.
 
 <a name="Block.Spans"></a>
-### func \(\*Block\) [Spans](<https://github.com/umats/gomarkdoc/blob/master/lang/block.go#L68>)
+### func \(\*Block\) [Spans](<https://github.com/umats/gomarkdoc/blob/main/lang/block.go#L68>)
 
 ```go
 func (b *Block) Spans() []*Span
@@ -218,7 +218,7 @@ func (b *Block) Spans() []*Span
 Spans provides the raw text of the block's contents as a set of text spans. The text is pre\-scrubbed and sanitized as determined by the block's Kind\(\), but it is not wrapped in any special constructs for rendering purposes \(such as markdown code blocks\).
 
 <a name="BlockKind"></a>
-## type [BlockKind](<https://github.com/umats/gomarkdoc/blob/master/lang/block.go#L21>)
+## type [BlockKind](<https://github.com/umats/gomarkdoc/blob/main/lang/block.go#L21>)
 
 BlockKind identifies the type of block element represented by the corresponding Block.
 
@@ -245,7 +245,7 @@ const (
 ```
 
 <a name="Config"></a>
-## type [Config](<https://github.com/umats/gomarkdoc/blob/master/lang/config.go#L26-L36>)
+## type [Config](<https://github.com/umats/gomarkdoc/blob/main/lang/config.go#L26-L36>)
 
 Config defines contextual information used to resolve documentation for a construct.
 
@@ -264,7 +264,7 @@ type Config struct {
 ```
 
 <a name="NewConfig"></a>
-### func [NewConfig](<https://github.com/umats/gomarkdoc/blob/master/lang/config.go#L70>)
+### func [NewConfig](<https://github.com/umats/gomarkdoc/blob/main/lang/config.go#L70>)
 
 ```go
 func NewConfig(log logger.Logger, workDir string, pkgDir string, opts ...ConfigOption) (*Config, error)
@@ -273,7 +273,7 @@ func NewConfig(log logger.Logger, workDir string, pkgDir string, opts ...ConfigO
 NewConfig generates a Config for the provided package directory. It will resolve the filepath and attempt to determine the repository containing the directory. If no repository is found, the Repo field will be set to nil. An error is returned if the provided directory is invalid.
 
 <a name="Config.Inc"></a>
-### func \(\*Config\) [Inc](<https://github.com/umats/gomarkdoc/blob/master/lang/config.go#L125>)
+### func \(\*Config\) [Inc](<https://github.com/umats/gomarkdoc/blob/main/lang/config.go#L125>)
 
 ```go
 func (c *Config) Inc(step int) *Config
@@ -282,7 +282,7 @@ func (c *Config) Inc(step int) *Config
 Inc copies the Config and increments the level by the provided step.
 
 <a name="ConfigOption"></a>
-## type [ConfigOption](<https://github.com/umats/gomarkdoc/blob/master/lang/config.go#L63>)
+## type [ConfigOption](<https://github.com/umats/gomarkdoc/blob/main/lang/config.go#L63>)
 
 ConfigOption modifies the Config generated by NewConfig.
 
@@ -291,7 +291,7 @@ type ConfigOption func(c *Config) error
 ```
 
 <a name="ConfigWithRepoOverrides"></a>
-### func [ConfigWithRepoOverrides](<https://github.com/umats/gomarkdoc/blob/master/lang/config.go#L141>)
+### func [ConfigWithRepoOverrides](<https://github.com/umats/gomarkdoc/blob/main/lang/config.go#L141>)
 
 ```go
 func ConfigWithRepoOverrides(overrides *Repo) ConfigOption
@@ -300,7 +300,7 @@ func ConfigWithRepoOverrides(overrides *Repo) ConfigOption
 ConfigWithRepoOverrides defines a set of manual overrides for the repository information to be used in place of automatic repository detection.
 
 <a name="Doc"></a>
-## type [Doc](<https://github.com/umats/gomarkdoc/blob/master/lang/doc.go#L5-L8>)
+## type [Doc](<https://github.com/umats/gomarkdoc/blob/main/lang/doc.go#L5-L8>)
 
 Doc provides access to the documentation comment contents for a package or symbol in a structured form.
 
@@ -311,7 +311,7 @@ type Doc struct {
 ```
 
 <a name="NewDoc"></a>
-### func [NewDoc](<https://github.com/umats/gomarkdoc/blob/master/lang/doc.go#L14>)
+### func [NewDoc](<https://github.com/umats/gomarkdoc/blob/main/lang/doc.go#L14>)
 
 ```go
 func NewDoc(cfg *Config, text string) *Doc
@@ -320,7 +320,7 @@ func NewDoc(cfg *Config, text string) *Doc
 NewDoc initializes a Doc struct from the provided raw documentation text and with headers rendered by default at the heading level provided. Documentation is separated into block level elements using the standard rules from golang's documentation conventions.
 
 <a name="Doc.Blocks"></a>
-### func \(\*Doc\) [Blocks](<https://github.com/umats/gomarkdoc/blob/master/lang/doc.go#L33>)
+### func \(\*Doc\) [Blocks](<https://github.com/umats/gomarkdoc/blob/main/lang/doc.go#L33>)
 
 ```go
 func (d *Doc) Blocks() []*Block
@@ -329,7 +329,7 @@ func (d *Doc) Blocks() []*Block
 Blocks holds the list of block elements that makes up the documentation contents.
 
 <a name="Doc.Level"></a>
-### func \(\*Doc\) [Level](<https://github.com/umats/gomarkdoc/blob/master/lang/doc.go#L27>)
+### func \(\*Doc\) [Level](<https://github.com/umats/gomarkdoc/blob/main/lang/doc.go#L27>)
 
 ```go
 func (d *Doc) Level() int
@@ -338,7 +338,7 @@ func (d *Doc) Level() int
 Level provides the default level that headers within the documentation should be rendered.
 
 <a name="Example"></a>
-## type [Example](<https://github.com/umats/gomarkdoc/blob/master/lang/example.go#L12-L16>)
+## type [Example](<https://github.com/umats/gomarkdoc/blob/main/lang/example.go#L12-L16>)
 
 Example holds a single documentation example for a package or symbol.
 
@@ -349,7 +349,7 @@ type Example struct {
 ```
 
 <a name="NewExample"></a>
-### func [NewExample](<https://github.com/umats/gomarkdoc/blob/master/lang/example.go#L20>)
+### func [NewExample](<https://github.com/umats/gomarkdoc/blob/main/lang/example.go#L20>)
 
 ```go
 func NewExample(cfg *Config, name string, doc *doc.Example) *Example
@@ -358,7 +358,7 @@ func NewExample(cfg *Config, name string, doc *doc.Example) *Example
 NewExample creates a new example from the example function's name, its documentation example and the files holding code related to the example.
 
 <a name="Example.Code"></a>
-### func \(\*Example\) [Code](<https://github.com/umats/gomarkdoc/blob/master/lang/example.go#L66>)
+### func \(\*Example\) [Code](<https://github.com/umats/gomarkdoc/blob/main/lang/example.go#L66>)
 
 ```go
 func (ex *Example) Code() (string, error)
@@ -367,7 +367,7 @@ func (ex *Example) Code() (string, error)
 Code provides the raw text code representation of the example's contents.
 
 <a name="Example.Doc"></a>
-### func \(\*Example\) [Doc](<https://github.com/umats/gomarkdoc/blob/master/lang/example.go#L61>)
+### func \(\*Example\) [Doc](<https://github.com/umats/gomarkdoc/blob/main/lang/example.go#L61>)
 
 ```go
 func (ex *Example) Doc() *Doc
@@ -376,7 +376,7 @@ func (ex *Example) Doc() *Doc
 Doc provides the structured contents of the documentation comment for the example.
 
 <a name="Example.HasOutput"></a>
-### func \(\*Example\) [HasOutput](<https://github.com/umats/gomarkdoc/blob/master/lang/example.go#L100>)
+### func \(\*Example\) [HasOutput](<https://github.com/umats/gomarkdoc/blob/main/lang/example.go#L100>)
 
 ```go
 func (ex *Example) HasOutput() bool
@@ -385,7 +385,7 @@ func (ex *Example) HasOutput() bool
 HasOutput indicates whether the example contains any example output.
 
 <a name="Example.Level"></a>
-### func \(\*Example\) [Level](<https://github.com/umats/gomarkdoc/blob/master/lang/example.go#L26>)
+### func \(\*Example\) [Level](<https://github.com/umats/gomarkdoc/blob/main/lang/example.go#L26>)
 
 ```go
 func (ex *Example) Level() int
@@ -394,7 +394,7 @@ func (ex *Example) Level() int
 Level provides the default level that headers for the example should be rendered.
 
 <a name="Example.Location"></a>
-### func \(\*Example\) [Location](<https://github.com/umats/gomarkdoc/blob/master/lang/example.go#L49>)
+### func \(\*Example\) [Location](<https://github.com/umats/gomarkdoc/blob/main/lang/example.go#L49>)
 
 ```go
 func (ex *Example) Location() Location
@@ -403,7 +403,7 @@ func (ex *Example) Location() Location
 Location returns a representation of the node's location in a file within a repository.
 
 <a name="Example.Name"></a>
-### func \(\*Example\) [Name](<https://github.com/umats/gomarkdoc/blob/master/lang/example.go#L32>)
+### func \(\*Example\) [Name](<https://github.com/umats/gomarkdoc/blob/main/lang/example.go#L32>)
 
 ```go
 func (ex *Example) Name() string
@@ -412,7 +412,7 @@ func (ex *Example) Name() string
 Name provides a pretty\-printed name for the specific example, if one was provided.
 
 <a name="Example.Output"></a>
-### func \(\*Example\) [Output](<https://github.com/umats/gomarkdoc/blob/master/lang/example.go#L95>)
+### func \(\*Example\) [Output](<https://github.com/umats/gomarkdoc/blob/main/lang/example.go#L95>)
 
 ```go
 func (ex *Example) Output() string
@@ -421,7 +421,7 @@ func (ex *Example) Output() string
 Output provides the code's example output.
 
 <a name="Example.Summary"></a>
-### func \(\*Example\) [Summary](<https://github.com/umats/gomarkdoc/blob/master/lang/example.go#L55>)
+### func \(\*Example\) [Summary](<https://github.com/umats/gomarkdoc/blob/main/lang/example.go#L55>)
 
 ```go
 func (ex *Example) Summary() string
@@ -430,7 +430,7 @@ func (ex *Example) Summary() string
 Summary provides the one\-sentence summary of the example's documentation comment.
 
 <a name="Example.Title"></a>
-### func \(\*Example\) [Title](<https://github.com/umats/gomarkdoc/blob/master/lang/example.go#L38>)
+### func \(\*Example\) [Title](<https://github.com/umats/gomarkdoc/blob/main/lang/example.go#L38>)
 
 ```go
 func (ex *Example) Title() string
@@ -439,7 +439,7 @@ func (ex *Example) Title() string
 Title provides a formatted string to print as the title of the example. It incorporates the example's name, if present.
 
 <a name="File"></a>
-## type [File](<https://github.com/umats/gomarkdoc/blob/master/lang/file.go#L5-L9>)
+## type [File](<https://github.com/umats/gomarkdoc/blob/main/lang/file.go#L5-L9>)
 
 File holds information for rendering a single file that contains one or more packages.
 
@@ -452,7 +452,7 @@ type File struct {
 ```
 
 <a name="NewFile"></a>
-### func [NewFile](<https://github.com/umats/gomarkdoc/blob/master/lang/file.go#L12>)
+### func [NewFile](<https://github.com/umats/gomarkdoc/blob/main/lang/file.go#L12>)
 
 ```go
 func NewFile(header, footer string, packages []*Package) *File
@@ -461,7 +461,7 @@ func NewFile(header, footer string, packages []*Package) *File
 NewFile creates a new instance of File with the provided information.
 
 <a name="Func"></a>
-## type [Func](<https://github.com/umats/gomarkdoc/blob/master/lang/func.go#L13-L17>)
+## type [Func](<https://github.com/umats/gomarkdoc/blob/main/lang/func.go#L13-L17>)
 
 Func holds documentation information for a single func declaration within a package or type.
 
@@ -472,7 +472,7 @@ type Func struct {
 ```
 
 <a name="NewFunc"></a>
-### func [NewFunc](<https://github.com/umats/gomarkdoc/blob/master/lang/func.go#L22>)
+### func [NewFunc](<https://github.com/umats/gomarkdoc/blob/main/lang/func.go#L22>)
 
 ```go
 func NewFunc(cfg *Config, doc *doc.Func, examples []*doc.Example) *Func
@@ -481,7 +481,7 @@ func NewFunc(cfg *Config, doc *doc.Func, examples []*doc.Example) *Func
 NewFunc creates a new Func from the corresponding documentation construct from the standard library, the related token.FileSet for the package and the list of examples for the package.
 
 <a name="Func.Anchor"></a>
-### func \(\*Func\) [Anchor](<https://github.com/umats/gomarkdoc/blob/master/lang/func.go#L108>)
+### func \(\*Func\) [Anchor](<https://github.com/umats/gomarkdoc/blob/main/lang/func.go#L108>)
 
 ```go
 func (fn *Func) Anchor() string
@@ -490,7 +490,7 @@ func (fn *Func) Anchor() string
 Anchor produces anchor text for the func.
 
 <a name="Func.Doc"></a>
-### func \(\*Func\) [Doc](<https://github.com/umats/gomarkdoc/blob/master/lang/func.go#L67>)
+### func \(\*Func\) [Doc](<https://github.com/umats/gomarkdoc/blob/main/lang/func.go#L67>)
 
 ```go
 func (fn *Func) Doc() *Doc
@@ -499,7 +499,7 @@ func (fn *Func) Doc() *Doc
 Doc provides the structured contents of the documentation comment for the function.
 
 <a name="Func.Examples"></a>
-### func \(\*Func\) [Examples](<https://github.com/umats/gomarkdoc/blob/master/lang/func.go#L80>)
+### func \(\*Func\) [Examples](<https://github.com/umats/gomarkdoc/blob/main/lang/func.go#L80>)
 
 ```go
 func (fn *Func) Examples() (examples []*Example)
@@ -508,7 +508,7 @@ func (fn *Func) Examples() (examples []*Example)
 Examples provides the list of examples from the list given on initialization that pertain to the function.
 
 <a name="Func.Level"></a>
-### func \(\*Func\) [Level](<https://github.com/umats/gomarkdoc/blob/master/lang/func.go#L28>)
+### func \(\*Func\) [Level](<https://github.com/umats/gomarkdoc/blob/main/lang/func.go#L28>)
 
 ```go
 func (fn *Func) Level() int
@@ -517,7 +517,7 @@ func (fn *Func) Level() int
 Level provides the default level at which headers for the func should be rendered in the final documentation.
 
 <a name="Func.Location"></a>
-### func \(\*Func\) [Location](<https://github.com/umats/gomarkdoc/blob/master/lang/func.go#L55>)
+### func \(\*Func\) [Location](<https://github.com/umats/gomarkdoc/blob/main/lang/func.go#L55>)
 
 ```go
 func (fn *Func) Location() Location
@@ -526,7 +526,7 @@ func (fn *Func) Location() Location
 Location returns a representation of the node's location in a file within a repository.
 
 <a name="Func.Name"></a>
-### func \(\*Func\) [Name](<https://github.com/umats/gomarkdoc/blob/master/lang/func.go#L33>)
+### func \(\*Func\) [Name](<https://github.com/umats/gomarkdoc/blob/main/lang/func.go#L33>)
 
 ```go
 func (fn *Func) Name() string
@@ -535,7 +535,7 @@ func (fn *Func) Name() string
 Name provides the name of the function.
 
 <a name="Func.Receiver"></a>
-### func \(\*Func\) [Receiver](<https://github.com/umats/gomarkdoc/blob/master/lang/func.go#L49>)
+### func \(\*Func\) [Receiver](<https://github.com/umats/gomarkdoc/blob/main/lang/func.go#L49>)
 
 ```go
 func (fn *Func) Receiver() string
@@ -544,7 +544,7 @@ func (fn *Func) Receiver() string
 Receiver provides the type of the receiver for the function, or empty string if there is no receiver type.
 
 <a name="Func.Signature"></a>
-### func \(\*Func\) [Signature](<https://github.com/umats/gomarkdoc/blob/master/lang/func.go#L73>)
+### func \(\*Func\) [Signature](<https://github.com/umats/gomarkdoc/blob/main/lang/func.go#L73>)
 
 ```go
 func (fn *Func) Signature() (string, error)
@@ -553,7 +553,7 @@ func (fn *Func) Signature() (string, error)
 Signature provides the raw text representation of the code for the function's signature.
 
 <a name="Func.Summary"></a>
-### func \(\*Func\) [Summary](<https://github.com/umats/gomarkdoc/blob/master/lang/func.go#L61>)
+### func \(\*Func\) [Summary](<https://github.com/umats/gomarkdoc/blob/main/lang/func.go#L61>)
 
 ```go
 func (fn *Func) Summary() string
@@ -562,7 +562,7 @@ func (fn *Func) Summary() string
 Summary provides the one\-sentence summary of the function's documentation comment.
 
 <a name="Func.Title"></a>
-### func \(\*Func\) [Title](<https://github.com/umats/gomarkdoc/blob/master/lang/func.go#L39>)
+### func \(\*Func\) [Title](<https://github.com/umats/gomarkdoc/blob/main/lang/func.go#L39>)
 
 ```go
 func (fn *Func) Title() string
@@ -571,7 +571,7 @@ func (fn *Func) Title() string
 Title provides the formatted name of the func. It is primarily designed for generating headers.
 
 <a name="Item"></a>
-## type [Item](<https://github.com/umats/gomarkdoc/blob/master/lang/list.go#L51-L55>)
+## type [Item](<https://github.com/umats/gomarkdoc/blob/main/lang/list.go#L51-L55>)
 
 Item defines a single item in a list in the documentation for a symbol or package.
 
@@ -582,7 +582,7 @@ type Item struct {
 ```
 
 <a name="NewItem"></a>
-### func [NewItem](<https://github.com/umats/gomarkdoc/blob/master/lang/list.go#L59>)
+### func [NewItem](<https://github.com/umats/gomarkdoc/blob/main/lang/list.go#L59>)
 
 ```go
 func NewItem(cfg *Config, docItem *comment.ListItem) *Item
@@ -591,7 +591,7 @@ func NewItem(cfg *Config, docItem *comment.ListItem) *Item
 NewItem initializes a list item from the equivalent type from the comment package.
 
 <a name="Item.Blocks"></a>
-### func \(\*Item\) [Blocks](<https://github.com/umats/gomarkdoc/blob/master/lang/list.go#L79>)
+### func \(\*Item\) [Blocks](<https://github.com/umats/gomarkdoc/blob/main/lang/list.go#L79>)
 
 ```go
 func (i *Item) Blocks() []*Block
@@ -600,7 +600,7 @@ func (i *Item) Blocks() []*Block
 Blocks returns the blocks of documentation in a list item.
 
 <a name="Item.Kind"></a>
-### func \(\*Item\) [Kind](<https://github.com/umats/gomarkdoc/blob/master/lang/list.go#L84>)
+### func \(\*Item\) [Kind](<https://github.com/umats/gomarkdoc/blob/main/lang/list.go#L84>)
 
 ```go
 func (i *Item) Kind() ItemKind
@@ -609,7 +609,7 @@ func (i *Item) Kind() ItemKind
 Kind returns the kind of the list item.
 
 <a name="Item.Number"></a>
-### func \(\*Item\) [Number](<https://github.com/umats/gomarkdoc/blob/master/lang/list.go#L90>)
+### func \(\*Item\) [Number](<https://github.com/umats/gomarkdoc/blob/main/lang/list.go#L90>)
 
 ```go
 func (i *Item) Number() int
@@ -618,7 +618,7 @@ func (i *Item) Number() int
 Number returns the number of the list item. Only populated if the item is of the OrderedItem kind.
 
 <a name="ItemKind"></a>
-## type [ItemKind](<https://github.com/umats/gomarkdoc/blob/master/lang/list.go#L39>)
+## type [ItemKind](<https://github.com/umats/gomarkdoc/blob/main/lang/list.go#L39>)
 
 ItemKind identifies the kind of item.
 
@@ -639,7 +639,7 @@ const (
 ```
 
 <a name="List"></a>
-## type [List](<https://github.com/umats/gomarkdoc/blob/master/lang/list.go#L10-L13>)
+## type [List](<https://github.com/umats/gomarkdoc/blob/main/lang/list.go#L10-L13>)
 
 List defines a list block element in the documentation for a symbol or package.
 
@@ -650,7 +650,7 @@ type List struct {
 ```
 
 <a name="NewList"></a>
-### func [NewList](<https://github.com/umats/gomarkdoc/blob/master/lang/list.go#L16>)
+### func [NewList](<https://github.com/umats/gomarkdoc/blob/main/lang/list.go#L16>)
 
 ```go
 func NewList(cfg *Config, docList *comment.List) *List
@@ -659,7 +659,7 @@ func NewList(cfg *Config, docList *comment.List) *List
 NewList initializes a list from the equivalent type from the comment package.
 
 <a name="List.BlankBetween"></a>
-### func \(\*List\) [BlankBetween](<https://github.com/umats/gomarkdoc/blob/master/lang/list.go#L29>)
+### func \(\*List\) [BlankBetween](<https://github.com/umats/gomarkdoc/blob/main/lang/list.go#L29>)
 
 ```go
 func (l *List) BlankBetween() bool
@@ -668,7 +668,7 @@ func (l *List) BlankBetween() bool
 BlankBetween returns true if there should be a blank line between list items.
 
 <a name="List.Items"></a>
-### func \(\*List\) [Items](<https://github.com/umats/gomarkdoc/blob/master/lang/list.go#L34>)
+### func \(\*List\) [Items](<https://github.com/umats/gomarkdoc/blob/main/lang/list.go#L34>)
 
 ```go
 func (l *List) Items() []*Item
@@ -677,7 +677,7 @@ func (l *List) Items() []*Item
 Items returns the slice of items in the list.
 
 <a name="Location"></a>
-## type [Location](<https://github.com/umats/gomarkdoc/blob/master/lang/config.go#L48-L54>)
+## type [Location](<https://github.com/umats/gomarkdoc/blob/main/lang/config.go#L48-L54>)
 
 Location holds information for identifying a position within a file and repository, if present.
 
@@ -692,7 +692,7 @@ type Location struct {
 ```
 
 <a name="NewLocation"></a>
-### func [NewLocation](<https://github.com/umats/gomarkdoc/blob/master/lang/config.go#L362>)
+### func [NewLocation](<https://github.com/umats/gomarkdoc/blob/main/lang/config.go#L362>)
 
 ```go
 func NewLocation(cfg *Config, node ast.Node) Location
@@ -701,7 +701,7 @@ func NewLocation(cfg *Config, node ast.Node) Location
 NewLocation returns a location for the provided Config and ast.Node combination. This is typically not called directly, but is made available via the Location\(\) methods of various lang constructs.
 
 <a name="Package"></a>
-## type [Package](<https://github.com/umats/gomarkdoc/blob/master/lang/package.go#L24-L28>)
+## type [Package](<https://github.com/umats/gomarkdoc/blob/main/lang/package.go#L24-L28>)
 
 Package holds documentation information for a package and all of the symbols contained within it.
 
@@ -712,7 +712,7 @@ type Package struct {
 ```
 
 <a name="NewPackage"></a>
-### func [NewPackage](<https://github.com/umats/gomarkdoc/blob/master/lang/package.go#L45>)
+### func [NewPackage](<https://github.com/umats/gomarkdoc/blob/main/lang/package.go#L45>)
 
 ```go
 func NewPackage(cfg *Config, examples []*doc.Example) *Package
@@ -721,7 +721,7 @@ func NewPackage(cfg *Config, examples []*doc.Example) *Package
 NewPackage creates a representation of a package's documentation from the raw documentation constructs provided by the standard library. This is only recommended for advanced scenarios. Most consumers will find it easier to use NewPackageFromBuild instead.
 
 <a name="NewPackageFromBuild"></a>
-### func [NewPackageFromBuild](<https://github.com/umats/gomarkdoc/blob/master/lang/package.go#L52>)
+### func [NewPackageFromBuild](<https://github.com/umats/gomarkdoc/blob/main/lang/package.go#L52>)
 
 ```go
 func NewPackageFromBuild(log logger.Logger, pkg *build.Package, opts ...PackageOption) (*Package, error)
@@ -730,7 +730,7 @@ func NewPackageFromBuild(log logger.Logger, pkg *build.Package, opts ...PackageO
 NewPackageFromBuild creates a representation of a package's documentation from the build metadata for that package. It can be configured using the provided options.
 
 <a name="Package.Consts"></a>
-### func \(\*Package\) [Consts](<https://github.com/umats/gomarkdoc/blob/master/lang/package.go#L155>)
+### func \(\*Package\) [Consts](<https://github.com/umats/gomarkdoc/blob/main/lang/package.go#L155>)
 
 ```go
 func (pkg *Package) Consts() (consts []*Value)
@@ -739,7 +739,7 @@ func (pkg *Package) Consts() (consts []*Value)
 Consts lists the top\-level constants provided by the package.
 
 <a name="Package.Dir"></a>
-### func \(\*Package\) [Dir](<https://github.com/umats/gomarkdoc/blob/master/lang/package.go#L110>)
+### func \(\*Package\) [Dir](<https://github.com/umats/gomarkdoc/blob/main/lang/package.go#L110>)
 
 ```go
 func (pkg *Package) Dir() string
@@ -748,7 +748,7 @@ func (pkg *Package) Dir() string
 Dir provides the name of the full directory in which the package is located.
 
 <a name="Package.Dirname"></a>
-### func \(\*Package\) [Dirname](<https://github.com/umats/gomarkdoc/blob/master/lang/package.go#L116>)
+### func \(\*Package\) [Dirname](<https://github.com/umats/gomarkdoc/blob/main/lang/package.go#L116>)
 
 ```go
 func (pkg *Package) Dirname() string
@@ -757,7 +757,7 @@ func (pkg *Package) Dirname() string
 Dirname provides the name of the leaf directory in which the package is located.
 
 <a name="Package.Doc"></a>
-### func \(\*Package\) [Doc](<https://github.com/umats/gomarkdoc/blob/master/lang/package.go#L149>)
+### func \(\*Package\) [Doc](<https://github.com/umats/gomarkdoc/blob/main/lang/package.go#L149>)
 
 ```go
 func (pkg *Package) Doc() *Doc
@@ -766,7 +766,7 @@ func (pkg *Package) Doc() *Doc
 Doc provides the structured contents of the documentation comment for the package.
 
 <a name="Package.Examples"></a>
-### func \(\*Package\) [Examples](<https://github.com/umats/gomarkdoc/blob/master/lang/package.go#L193>)
+### func \(\*Package\) [Examples](<https://github.com/umats/gomarkdoc/blob/main/lang/package.go#L193>)
 
 ```go
 func (pkg *Package) Examples() (examples []*Example)
@@ -775,7 +775,7 @@ func (pkg *Package) Examples() (examples []*Example)
 Examples provides the package\-level examples that have been defined. This does not include examples that are associated with symbols contained within the package.
 
 <a name="Package.Funcs"></a>
-### func \(\*Package\) [Funcs](<https://github.com/umats/gomarkdoc/blob/master/lang/package.go#L173>)
+### func \(\*Package\) [Funcs](<https://github.com/umats/gomarkdoc/blob/main/lang/package.go#L173>)
 
 ```go
 func (pkg *Package) Funcs() (funcs []*Func)
@@ -784,7 +784,7 @@ func (pkg *Package) Funcs() (funcs []*Func)
 Funcs lists the top\-level functions provided by the package.
 
 <a name="Package.Import"></a>
-### func \(\*Package\) [Import](<https://github.com/umats/gomarkdoc/blob/master/lang/package.go#L130>)
+### func \(\*Package\) [Import](<https://github.com/umats/gomarkdoc/blob/main/lang/package.go#L130>)
 
 ```go
 func (pkg *Package) Import() string
@@ -793,7 +793,7 @@ func (pkg *Package) Import() string
 Import provides the raw text for the import declaration that is used to import code from the package. If your package's documentation is generated from a local path and does not use Go Modules, this will typically print \`import "."\`.
 
 <a name="Package.ImportPath"></a>
-### func \(\*Package\) [ImportPath](<https://github.com/umats/gomarkdoc/blob/master/lang/package.go#L137>)
+### func \(\*Package\) [ImportPath](<https://github.com/umats/gomarkdoc/blob/main/lang/package.go#L137>)
 
 ```go
 func (pkg *Package) ImportPath() string
@@ -802,7 +802,7 @@ func (pkg *Package) ImportPath() string
 ImportPath provides the identifier used for the package when installing or importing the package. If your package's documentation is generated from a local path and does not use Go Modules, this will typically print \`.\`.
 
 <a name="Package.Level"></a>
-### func \(\*Package\) [Level](<https://github.com/umats/gomarkdoc/blob/master/lang/package.go#L105>)
+### func \(\*Package\) [Level](<https://github.com/umats/gomarkdoc/blob/main/lang/package.go#L105>)
 
 ```go
 func (pkg *Package) Level() int
@@ -811,7 +811,7 @@ func (pkg *Package) Level() int
 Level provides the default level that headers for the package's root documentation should be rendered.
 
 <a name="Package.Name"></a>
-### func \(\*Package\) [Name](<https://github.com/umats/gomarkdoc/blob/master/lang/package.go#L122>)
+### func \(\*Package\) [Name](<https://github.com/umats/gomarkdoc/blob/main/lang/package.go#L122>)
 
 ```go
 func (pkg *Package) Name() string
@@ -820,7 +820,7 @@ func (pkg *Package) Name() string
 Name provides the name of the package as it would be seen from another package importing it.
 
 <a name="Package.Summary"></a>
-### func \(\*Package\) [Summary](<https://github.com/umats/gomarkdoc/blob/master/lang/package.go#L143>)
+### func \(\*Package\) [Summary](<https://github.com/umats/gomarkdoc/blob/main/lang/package.go#L143>)
 
 ```go
 func (pkg *Package) Summary() string
@@ -829,7 +829,7 @@ func (pkg *Package) Summary() string
 Summary provides the one\-sentence summary of the package's documentation comment.
 
 <a name="Package.Types"></a>
-### func \(\*Package\) [Types](<https://github.com/umats/gomarkdoc/blob/master/lang/package.go#L182>)
+### func \(\*Package\) [Types](<https://github.com/umats/gomarkdoc/blob/main/lang/package.go#L182>)
 
 ```go
 func (pkg *Package) Types() (types []*Type)
@@ -838,7 +838,7 @@ func (pkg *Package) Types() (types []*Type)
 Types lists the top\-level types provided by the package.
 
 <a name="Package.Vars"></a>
-### func \(\*Package\) [Vars](<https://github.com/umats/gomarkdoc/blob/master/lang/package.go#L164>)
+### func \(\*Package\) [Vars](<https://github.com/umats/gomarkdoc/blob/main/lang/package.go#L164>)
 
 ```go
 func (pkg *Package) Vars() (vars []*Value)
@@ -847,7 +847,7 @@ func (pkg *Package) Vars() (vars []*Value)
 Vars lists the top\-level variables provided by the package.
 
 <a name="PackageOption"></a>
-## type [PackageOption](<https://github.com/umats/gomarkdoc/blob/master/lang/package.go#L38>)
+## type [PackageOption](<https://github.com/umats/gomarkdoc/blob/main/lang/package.go#L38>)
 
 PackageOption configures one or more options for the package.
 
@@ -856,7 +856,7 @@ type PackageOption func(opts *PackageOptions) error
 ```
 
 <a name="PackageWithRepositoryOverrides"></a>
-### func [PackageWithRepositoryOverrides](<https://github.com/umats/gomarkdoc/blob/master/lang/package.go#L96>)
+### func [PackageWithRepositoryOverrides](<https://github.com/umats/gomarkdoc/blob/main/lang/package.go#L96>)
 
 ```go
 func PackageWithRepositoryOverrides(repo *Repo) PackageOption
@@ -865,7 +865,7 @@ func PackageWithRepositoryOverrides(repo *Repo) PackageOption
 PackageWithRepositoryOverrides can be used along with the NewPackageFromBuild function to define manual overrides to the automatic repository detection logic.
 
 <a name="PackageWithUnexportedIncluded"></a>
-### func [PackageWithUnexportedIncluded](<https://github.com/umats/gomarkdoc/blob/master/lang/package.go#L86>)
+### func [PackageWithUnexportedIncluded](<https://github.com/umats/gomarkdoc/blob/main/lang/package.go#L86>)
 
 ```go
 func PackageWithUnexportedIncluded() PackageOption
@@ -874,7 +874,7 @@ func PackageWithUnexportedIncluded() PackageOption
 PackageWithUnexportedIncluded can be used along with the NewPackageFromBuild function to specify that all symbols, including unexported ones, should be included in the documentation for the package.
 
 <a name="PackageOptions"></a>
-## type [PackageOptions](<https://github.com/umats/gomarkdoc/blob/master/lang/package.go#L32-L35>)
+## type [PackageOptions](<https://github.com/umats/gomarkdoc/blob/main/lang/package.go#L32-L35>)
 
 PackageOptions holds options related to the configuration of the package and its documentation on creation.
 
@@ -885,7 +885,7 @@ type PackageOptions struct {
 ```
 
 <a name="Position"></a>
-## type [Position](<https://github.com/umats/gomarkdoc/blob/master/lang/config.go#L57-L60>)
+## type [Position](<https://github.com/umats/gomarkdoc/blob/main/lang/config.go#L57-L60>)
 
 Position represents a line and column number within a file.
 
@@ -897,7 +897,7 @@ type Position struct {
 ```
 
 <a name="Repo"></a>
-## type [Repo](<https://github.com/umats/gomarkdoc/blob/master/lang/config.go#L40-L44>)
+## type [Repo](<https://github.com/umats/gomarkdoc/blob/main/lang/config.go#L40-L44>)
 
 Repo represents information about a repository relevant to documentation generation.
 
@@ -910,7 +910,7 @@ type Repo struct {
 ```
 
 <a name="Span"></a>
-## type [Span](<https://github.com/umats/gomarkdoc/blob/master/lang/span.go#L13-L18>)
+## type [Span](<https://github.com/umats/gomarkdoc/blob/main/lang/span.go#L13-L18>)
 
 Span defines a single text span in a block for documentation of a symbol or package.
 
@@ -921,7 +921,7 @@ type Span struct {
 ```
 
 <a name="NewSpan"></a>
-### func [NewSpan](<https://github.com/umats/gomarkdoc/blob/master/lang/span.go#L41>)
+### func [NewSpan](<https://github.com/umats/gomarkdoc/blob/main/lang/span.go#L41>)
 
 ```go
 func NewSpan(cfg *Config, kind SpanKind, text string, url string) *Span
@@ -930,7 +930,7 @@ func NewSpan(cfg *Config, kind SpanKind, text string, url string) *Span
 NewSpan creates a new span.
 
 <a name="ParseSpans"></a>
-### func [ParseSpans](<https://github.com/umats/gomarkdoc/blob/master/lang/span.go#L61>)
+### func [ParseSpans](<https://github.com/umats/gomarkdoc/blob/main/lang/span.go#L61>)
 
 ```go
 func ParseSpans(cfg *Config, texts []comment.Text) []*Span
@@ -939,7 +939,7 @@ func ParseSpans(cfg *Config, texts []comment.Text) []*Span
 ParseSpans turns a set of \*\[comment.Text\] entries into a slice of spans.
 
 <a name="Span.Kind"></a>
-### func \(\*Span\) [Kind](<https://github.com/umats/gomarkdoc/blob/master/lang/span.go#L46>)
+### func \(\*Span\) [Kind](<https://github.com/umats/gomarkdoc/blob/main/lang/span.go#L46>)
 
 ```go
 func (s *Span) Kind() SpanKind
@@ -948,7 +948,7 @@ func (s *Span) Kind() SpanKind
 Kind provides the kind of data that this span represents.
 
 <a name="Span.Text"></a>
-### func \(\*Span\) [Text](<https://github.com/umats/gomarkdoc/blob/master/lang/span.go#L51>)
+### func \(\*Span\) [Text](<https://github.com/umats/gomarkdoc/blob/main/lang/span.go#L51>)
 
 ```go
 func (s *Span) Text() string
@@ -957,7 +957,7 @@ func (s *Span) Text() string
 Text provides the raw text for the span.
 
 <a name="Span.URL"></a>
-### func \(\*Span\) [URL](<https://github.com/umats/gomarkdoc/blob/master/lang/span.go#L56>)
+### func \(\*Span\) [URL](<https://github.com/umats/gomarkdoc/blob/main/lang/span.go#L56>)
 
 ```go
 func (s *Span) URL() string
@@ -966,7 +966,7 @@ func (s *Span) URL() string
 URL provides the url associated with the span, if any.
 
 <a name="SpanKind"></a>
-## type [SpanKind](<https://github.com/umats/gomarkdoc/blob/master/lang/span.go#L22>)
+## type [SpanKind](<https://github.com/umats/gomarkdoc/blob/main/lang/span.go#L22>)
 
 SpanKind identifies the type of span element represented by the corresponding Span.
 
@@ -994,7 +994,7 @@ const (
 ```
 
 <a name="Symbol"></a>
-## type [Symbol](<https://github.com/umats/gomarkdoc/blob/master/lang/symbol.go#L13-L22>)
+## type [Symbol](<https://github.com/umats/gomarkdoc/blob/main/lang/symbol.go#L13-L22>)
 
 Symbol provides identity information for a symbol in a package.
 
@@ -1012,7 +1012,7 @@ type Symbol struct {
 ```
 
 <a name="Symbol.Anchor"></a>
-### func \(Symbol\) [Anchor](<https://github.com/umats/gomarkdoc/blob/master/lang/symbol.go#L158>)
+### func \(Symbol\) [Anchor](<https://github.com/umats/gomarkdoc/blob/main/lang/symbol.go#L158>)
 
 ```go
 func (s Symbol) Anchor() string
@@ -1021,7 +1021,7 @@ func (s Symbol) Anchor() string
 Anchor produces anchor text for the symbol.
 
 <a name="SymbolKind"></a>
-## type [SymbolKind](<https://github.com/umats/gomarkdoc/blob/master/lang/symbol.go#L25>)
+## type [SymbolKind](<https://github.com/umats/gomarkdoc/blob/main/lang/symbol.go#L25>)
 
 SymbolKind identifies the type of symbol.
 
@@ -1043,7 +1043,7 @@ const (
 ```
 
 <a name="Type"></a>
-## type [Type](<https://github.com/umats/gomarkdoc/blob/master/lang/type.go#L11-L15>)
+## type [Type](<https://github.com/umats/gomarkdoc/blob/main/lang/type.go#L11-L15>)
 
 Type holds documentation information for a type declaration.
 
@@ -1054,7 +1054,7 @@ type Type struct {
 ```
 
 <a name="NewType"></a>
-### func [NewType](<https://github.com/umats/gomarkdoc/blob/master/lang/type.go#L20>)
+### func [NewType](<https://github.com/umats/gomarkdoc/blob/main/lang/type.go#L20>)
 
 ```go
 func NewType(cfg *Config, doc *doc.Type, examples []*doc.Example) *Type
@@ -1063,7 +1063,7 @@ func NewType(cfg *Config, doc *doc.Type, examples []*doc.Example) *Type
 NewType creates a Type from the raw documentation representation of the type, the token.FileSet for the package's files and the full list of examples from the containing package.
 
 <a name="Type.Anchor"></a>
-### func \(\*Type\) [Anchor](<https://github.com/umats/gomarkdoc/blob/master/lang/type.go#L141>)
+### func \(\*Type\) [Anchor](<https://github.com/umats/gomarkdoc/blob/main/lang/type.go#L141>)
 
 ```go
 func (typ *Type) Anchor() string
@@ -1072,7 +1072,7 @@ func (typ *Type) Anchor() string
 Anchor produces anchor text for the type.
 
 <a name="Type.Consts"></a>
-### func \(\*Type\) [Consts](<https://github.com/umats/gomarkdoc/blob/master/lang/type.go#L121>)
+### func \(\*Type\) [Consts](<https://github.com/umats/gomarkdoc/blob/main/lang/type.go#L121>)
 
 ```go
 func (typ *Type) Consts() []*Value
@@ -1081,7 +1081,7 @@ func (typ *Type) Consts() []*Value
 Consts lists the const declaration blocks containing values of this type.
 
 <a name="Type.Decl"></a>
-### func \(\*Type\) [Decl](<https://github.com/umats/gomarkdoc/blob/master/lang/type.go#L61>)
+### func \(\*Type\) [Decl](<https://github.com/umats/gomarkdoc/blob/main/lang/type.go#L61>)
 
 ```go
 func (typ *Type) Decl() (string, error)
@@ -1090,7 +1090,7 @@ func (typ *Type) Decl() (string, error)
 Decl provides the raw text representation of the code for the type's declaration.
 
 <a name="Type.Doc"></a>
-### func \(\*Type\) [Doc](<https://github.com/umats/gomarkdoc/blob/master/lang/type.go#L55>)
+### func \(\*Type\) [Doc](<https://github.com/umats/gomarkdoc/blob/main/lang/type.go#L55>)
 
 ```go
 func (typ *Type) Doc() *Doc
@@ -1099,7 +1099,7 @@ func (typ *Type) Doc() *Doc
 Doc provides the structured contents of the documentation comment for the type.
 
 <a name="Type.Examples"></a>
-### func \(\*Type\) [Examples](<https://github.com/umats/gomarkdoc/blob/master/lang/type.go#L67>)
+### func \(\*Type\) [Examples](<https://github.com/umats/gomarkdoc/blob/main/lang/type.go#L67>)
 
 ```go
 func (typ *Type) Examples() (examples []*Example)
@@ -1108,7 +1108,7 @@ func (typ *Type) Examples() (examples []*Example)
 Examples lists the examples pertaining to the type from the set provided on initialization.
 
 <a name="Type.Funcs"></a>
-### func \(\*Type\) [Funcs](<https://github.com/umats/gomarkdoc/blob/master/lang/type.go#L101>)
+### func \(\*Type\) [Funcs](<https://github.com/umats/gomarkdoc/blob/main/lang/type.go#L101>)
 
 ```go
 func (typ *Type) Funcs() []*Func
@@ -1117,7 +1117,7 @@ func (typ *Type) Funcs() []*Func
 Funcs lists the funcs related to the type. This only includes functions which return an instance of the type or its pointer.
 
 <a name="Type.Level"></a>
-### func \(\*Type\) [Level](<https://github.com/umats/gomarkdoc/blob/master/lang/type.go#L26>)
+### func \(\*Type\) [Level](<https://github.com/umats/gomarkdoc/blob/main/lang/type.go#L26>)
 
 ```go
 func (typ *Type) Level() int
@@ -1126,7 +1126,7 @@ func (typ *Type) Level() int
 Level provides the default level that headers for the type should be rendered.
 
 <a name="Type.Location"></a>
-### func \(\*Type\) [Location](<https://github.com/umats/gomarkdoc/blob/master/lang/type.go#L43>)
+### func \(\*Type\) [Location](<https://github.com/umats/gomarkdoc/blob/main/lang/type.go#L43>)
 
 ```go
 func (typ *Type) Location() Location
@@ -1135,7 +1135,7 @@ func (typ *Type) Location() Location
 Location returns a representation of the node's location in a file within a repository.
 
 <a name="Type.Methods"></a>
-### func \(\*Type\) [Methods](<https://github.com/umats/gomarkdoc/blob/master/lang/type.go#L111>)
+### func \(\*Type\) [Methods](<https://github.com/umats/gomarkdoc/blob/main/lang/type.go#L111>)
 
 ```go
 func (typ *Type) Methods() []*Func
@@ -1144,7 +1144,7 @@ func (typ *Type) Methods() []*Func
 Methods lists the funcs that use the type as a value or pointer receiver.
 
 <a name="Type.Name"></a>
-### func \(\*Type\) [Name](<https://github.com/umats/gomarkdoc/blob/master/lang/type.go#L31>)
+### func \(\*Type\) [Name](<https://github.com/umats/gomarkdoc/blob/main/lang/type.go#L31>)
 
 ```go
 func (typ *Type) Name() string
@@ -1153,7 +1153,7 @@ func (typ *Type) Name() string
 Name provides the name of the type.
 
 <a name="Type.Summary"></a>
-### func \(\*Type\) [Summary](<https://github.com/umats/gomarkdoc/blob/master/lang/type.go#L49>)
+### func \(\*Type\) [Summary](<https://github.com/umats/gomarkdoc/blob/main/lang/type.go#L49>)
 
 ```go
 func (typ *Type) Summary() string
@@ -1162,7 +1162,7 @@ func (typ *Type) Summary() string
 Summary provides the one\-sentence summary of the type's documentation comment.
 
 <a name="Type.Title"></a>
-### func \(\*Type\) [Title](<https://github.com/umats/gomarkdoc/blob/master/lang/type.go#L37>)
+### func \(\*Type\) [Title](<https://github.com/umats/gomarkdoc/blob/main/lang/type.go#L37>)
 
 ```go
 func (typ *Type) Title() string
@@ -1171,7 +1171,7 @@ func (typ *Type) Title() string
 Title provides a formatted name suitable for use in a header identifying the type.
 
 <a name="Type.Vars"></a>
-### func \(\*Type\) [Vars](<https://github.com/umats/gomarkdoc/blob/master/lang/type.go#L131>)
+### func \(\*Type\) [Vars](<https://github.com/umats/gomarkdoc/blob/main/lang/type.go#L131>)
 
 ```go
 func (typ *Type) Vars() []*Value
@@ -1180,7 +1180,7 @@ func (typ *Type) Vars() []*Value
 Vars lists the var declaration blocks containing values of this type.
 
 <a name="Value"></a>
-## type [Value](<https://github.com/umats/gomarkdoc/blob/master/lang/value.go#L8-L11>)
+## type [Value](<https://github.com/umats/gomarkdoc/blob/main/lang/value.go#L8-L11>)
 
 Value holds documentation for a var or const declaration within a package.
 
@@ -1191,7 +1191,7 @@ type Value struct {
 ```
 
 <a name="NewValue"></a>
-### func [NewValue](<https://github.com/umats/gomarkdoc/blob/master/lang/value.go#L15>)
+### func [NewValue](<https://github.com/umats/gomarkdoc/blob/main/lang/value.go#L15>)
 
 ```go
 func NewValue(cfg *Config, doc *doc.Value) *Value
@@ -1200,7 +1200,7 @@ func NewValue(cfg *Config, doc *doc.Value) *Value
 NewValue creates a new Value from the raw const or var documentation and the \[token.FileSet\] of files for the containing package.
 
 <a name="Value.Anchor"></a>
-### func \(\*Value\) [Anchor](<https://github.com/umats/gomarkdoc/blob/master/lang/value.go#L50>)
+### func \(\*Value\) [Anchor](<https://github.com/umats/gomarkdoc/blob/main/lang/value.go#L50>)
 
 ```go
 func (v *Value) Anchor() string
@@ -1209,7 +1209,7 @@ func (v *Value) Anchor() string
 Anchor produces anchor text for the value.
 
 <a name="Value.Decl"></a>
-### func \(\*Value\) [Decl](<https://github.com/umats/gomarkdoc/blob/master/lang/value.go#L45>)
+### func \(\*Value\) [Decl](<https://github.com/umats/gomarkdoc/blob/main/lang/value.go#L45>)
 
 ```go
 func (v *Value) Decl() (string, error)
@@ -1218,7 +1218,7 @@ func (v *Value) Decl() (string, error)
 Decl provides the raw text representation of the code for declaring the const or var.
 
 <a name="Value.Doc"></a>
-### func \(\*Value\) [Doc](<https://github.com/umats/gomarkdoc/blob/master/lang/value.go#L39>)
+### func \(\*Value\) [Doc](<https://github.com/umats/gomarkdoc/blob/main/lang/value.go#L39>)
 
 ```go
 func (v *Value) Doc() *Doc
@@ -1227,7 +1227,7 @@ func (v *Value) Doc() *Doc
 Doc provides the structured contents of the documentation comment for the example.
 
 <a name="Value.Level"></a>
-### func \(\*Value\) [Level](<https://github.com/umats/gomarkdoc/blob/master/lang/value.go#L21>)
+### func \(\*Value\) [Level](<https://github.com/umats/gomarkdoc/blob/main/lang/value.go#L21>)
 
 ```go
 func (v *Value) Level() int
@@ -1236,7 +1236,7 @@ func (v *Value) Level() int
 Level provides the default level that headers for the value should be rendered.
 
 <a name="Value.Location"></a>
-### func \(\*Value\) [Location](<https://github.com/umats/gomarkdoc/blob/master/lang/value.go#L27>)
+### func \(\*Value\) [Location](<https://github.com/umats/gomarkdoc/blob/main/lang/value.go#L27>)
 
 ```go
 func (v *Value) Location() Location
@@ -1245,7 +1245,7 @@ func (v *Value) Location() Location
 Location returns a representation of the node's location in a file within a repository.
 
 <a name="Value.Summary"></a>
-### func \(\*Value\) [Summary](<https://github.com/umats/gomarkdoc/blob/master/lang/value.go#L33>)
+### func \(\*Value\) [Summary](<https://github.com/umats/gomarkdoc/blob/main/lang/value.go#L33>)
 
 ```go
 func (v *Value) Summary() string

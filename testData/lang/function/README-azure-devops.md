@@ -40,7 +40,7 @@ var Variable = 5
 ```
 
 <a name="Standalone"></a>
-## func [Standalone](<https://github.com/umats/gomarkdoc?path=testData%2Flang%2Ffunction%2Ffunc.go&version=GBmaster&lineStyle=plain&line=15&lineEnd=15&lineStartColumn=1&lineEndColumn=48>)
+## func [Standalone](<https://github.com/umats/gomarkdoc?path=testData%2Flang%2Ffunction%2Ffunc.go&version=GBmain&lineStyle=plain&line=15&lineEnd=15&lineStartColumn=1&lineEndColumn=48>)
 
 ```go
 func Standalone(p1 int, p2 string) (int, error)
@@ -119,7 +119,7 @@ func main() {
 </details>
 
 <a name="Generic"></a>
-## type [Generic](<https://github.com/umats/gomarkdoc?path=testData%2Flang%2Ffunction%2Ffunc.go&version=GBmaster&lineStyle=plain&line=34&lineEnd=34&lineStartColumn=1&lineEndColumn=29>)
+## type [Generic](<https://github.com/umats/gomarkdoc?path=testData%2Flang%2Ffunction%2Ffunc.go&version=GBmain&lineStyle=plain&line=34&lineEnd=34&lineStartColumn=1&lineEndColumn=29>)
 
 Generic is a struct with a generic type.
 
@@ -128,7 +128,7 @@ type Generic[T any] struct{}
 ```
 
 <a name="Generic[T].WithGenericReceiver"></a>
-### func \(Generic\[T\]\) [WithGenericReceiver](<https://github.com/umats/gomarkdoc?path=testData%2Flang%2Ffunction%2Ffunc.go&version=GBmaster&lineStyle=plain&line=37&lineEnd=37&lineStartColumn=1&lineEndColumn=42>)
+### func \(Generic\[T\]\) [WithGenericReceiver](<https://github.com/umats/gomarkdoc?path=testData%2Flang%2Ffunction%2Ffunc.go&version=GBmain&lineStyle=plain&line=37&lineEnd=37&lineStartColumn=1&lineEndColumn=42>)
 
 ```go
 func (r Generic[T]) WithGenericReceiver()
@@ -158,7 +158,7 @@ func main() {
 </details>
 
 <a name="Receiver"></a>
-## type [Receiver](<https://github.com/umats/gomarkdoc?path=testData%2Flang%2Ffunction%2Ffunc.go&version=GBmaster&lineStyle=plain&line=20&lineEnd=20&lineStartColumn=1&lineEndColumn=23>)
+## type [Receiver](<https://github.com/umats/gomarkdoc?path=testData%2Flang%2Ffunction%2Ffunc.go&version=GBmain&lineStyle=plain&line=20&lineEnd=20&lineStartColumn=1&lineEndColumn=23>)
 
 Receiver is a type used to demonstrate functions with receivers.
 
@@ -213,7 +213,7 @@ func main() {
 </details>
 
 <a name="New"></a>
-### func [New](<https://github.com/umats/gomarkdoc?path=testData%2Flang%2Ffunction%2Ffunc.go&version=GBmaster&lineStyle=plain&line=23&lineEnd=23&lineStartColumn=1&lineEndColumn=20>)
+### func [New](<https://github.com/umats/gomarkdoc?path=testData%2Flang%2Ffunction%2Ffunc.go&version=GBmain&lineStyle=plain&line=23&lineEnd=23&lineStartColumn=1&lineEndColumn=20>)
 
 ```go
 func New() Receiver
@@ -222,7 +222,7 @@ func New() Receiver
 New is an initializer for Receiver.
 
 <a name="Receiver.WithPtrReceiver"></a>
-### func \(\*Receiver\) [WithPtrReceiver](<https://github.com/umats/gomarkdoc?path=testData%2Flang%2Ffunction%2Ffunc.go&version=GBmaster&lineStyle=plain&line=31&lineEnd=31&lineStartColumn=1&lineEndColumn=37>)
+### func \(\*Receiver\) [WithPtrReceiver](<https://github.com/umats/gomarkdoc?path=testData%2Flang%2Ffunction%2Ffunc.go&version=GBmain&lineStyle=plain&line=31&lineEnd=31&lineStartColumn=1&lineEndColumn=37>)
 
 ```go
 func (r *Receiver) WithPtrReceiver()
@@ -231,7 +231,7 @@ func (r *Receiver) WithPtrReceiver()
 WithPtrReceiver has a pointer receiver.
 
 <a name="Receiver.WithReceiver"></a>
-### func \(Receiver\) [WithReceiver](<https://github.com/umats/gomarkdoc?path=testData%2Flang%2Ffunction%2Ffunc.go&version=GBmaster&lineStyle=plain&line=28&lineEnd=28&lineStartColumn=1&lineEndColumn=33>)
+### func \(Receiver\) [WithReceiver](<https://github.com/umats/gomarkdoc?path=testData%2Flang%2Ffunction%2Ffunc.go&version=GBmain&lineStyle=plain&line=28&lineEnd=28&lineStartColumn=1&lineEndColumn=33>)
 
 ```go
 func (r Receiver) WithReceiver()

@@ -19,7 +19,7 @@ Package logger provides a simple console logger for reporting information about 
 
 
 <a name="Level"></a>
-## type [Level](<https://github.com/umats/gomarkdoc/blob/master/logger/logger.go#L26>)
+## type [Level](<https://github.com/umats/gomarkdoc/blob/main/logger/logger.go#L26>)
 
 Level defines valid logging levels for a Logger.
 
@@ -39,7 +39,7 @@ const (
 ```
 
 <a name="Logger"></a>
-## type [Logger](<https://github.com/umats/gomarkdoc/blob/master/logger/logger.go#L14-L23>)
+## type [Logger](<https://github.com/umats/gomarkdoc/blob/main/logger/logger.go#L14-L23>)
 
 Logger provides basic logging capabilities at different logging levels.
 
@@ -57,7 +57,7 @@ type Logger interface {
 ```
 
 <a name="New"></a>
-### func [New](<https://github.com/umats/gomarkdoc/blob/master/logger/logger.go#L46>)
+### func [New](<https://github.com/umats/gomarkdoc/blob/main/logger/logger.go#L46>)
 
 ```go
 func New(level Level, opts ...Option) Logger
@@ -66,7 +66,7 @@ func New(level Level, opts ...Option) Logger
 New initializes a new Logger.
 
 <a name="Option"></a>
-## type [Option](<https://github.com/umats/gomarkdoc/blob/master/logger/logger.go#L29>)
+## type [Option](<https://github.com/umats/gomarkdoc/blob/main/logger/logger.go#L29>)
 
 Option defines an option for configuring the logger.
 
@@ -75,7 +75,7 @@ type Option func(opts *options)
 ```
 
 <a name="WithField"></a>
-### func [WithField](<https://github.com/umats/gomarkdoc/blob/master/logger/logger.go#L85>)
+### func [WithField](<https://github.com/umats/gomarkdoc/blob/main/logger/logger.go#L85>)
 
 ```go
 func WithField(key string, value any) Option

@@ -71,7 +71,7 @@ Each of the formats in this package contains the same set of formatting function
 
 
 <a name="AzureDevOpsMarkdown"></a>
-## type [AzureDevOpsMarkdown](<https://github.com/umats/gomarkdoc/blob/master/format/devops.go#L19>)
+## type [AzureDevOpsMarkdown](<https://github.com/umats/gomarkdoc/blob/main/format/devops.go#L19>)
 
 AzureDevOpsMarkdown provides a Format which is compatible with Azure DevOps's syntax and semantics. See the Azure DevOps documentation for more details about their markdown format: https://docs.microsoft.com/en-us/azure/devops/project/wiki/markdown-guidance?view=azure-devops
 
@@ -80,7 +80,7 @@ type AzureDevOpsMarkdown struct{}
 ```
 
 <a name="AzureDevOpsMarkdown.Accordion"></a>
-### func \(\*AzureDevOpsMarkdown\) [Accordion](<https://github.com/umats/gomarkdoc/blob/master/format/devops.go#L137>)
+### func \(\*AzureDevOpsMarkdown\) [Accordion](<https://github.com/umats/gomarkdoc/blob/main/format/devops.go#L137>)
 
 ```go
 func (f *AzureDevOpsMarkdown) Accordion(title, body string) (string, error)
@@ -89,7 +89,7 @@ func (f *AzureDevOpsMarkdown) Accordion(title, body string) (string, error)
 Accordion generates a collapsible content. The accordion's visible title while collapsed is the provided title and the expanded content is the body.
 
 <a name="AzureDevOpsMarkdown.AccordionHeader"></a>
-### func \(\*AzureDevOpsMarkdown\) [AccordionHeader](<https://github.com/umats/gomarkdoc/blob/master/format/devops.go#L148>)
+### func \(\*AzureDevOpsMarkdown\) [AccordionHeader](<https://github.com/umats/gomarkdoc/blob/main/format/devops.go#L148>)
 
 ```go
 func (f *AzureDevOpsMarkdown) AccordionHeader(title string) (string, error)
@@ -104,7 +104,7 @@ accordion := format.AccordionHeader("Accordion Title") + "Accordion Body" + form
 ```
 
 <a name="AzureDevOpsMarkdown.AccordionTerminator"></a>
-### func \(\*AzureDevOpsMarkdown\) [AccordionTerminator](<https://github.com/umats/gomarkdoc/blob/master/format/devops.go#L155>)
+### func \(\*AzureDevOpsMarkdown\) [AccordionTerminator](<https://github.com/umats/gomarkdoc/blob/main/format/devops.go#L155>)
 
 ```go
 func (f *AzureDevOpsMarkdown) AccordionTerminator() (string, error)
@@ -113,7 +113,7 @@ func (f *AzureDevOpsMarkdown) AccordionTerminator() (string, error)
 AccordionTerminator generates the code necessary to terminate an accordion after the body. It is expected to be used in conjunction with AccordionHeader\(\). See AccordionHeader for a full description.
 
 <a name="AzureDevOpsMarkdown.Anchor"></a>
-### func \(\*AzureDevOpsMarkdown\) [Anchor](<https://github.com/umats/gomarkdoc/blob/master/format/devops.go#L33>)
+### func \(\*AzureDevOpsMarkdown\) [Anchor](<https://github.com/umats/gomarkdoc/blob/main/format/devops.go#L33>)
 
 ```go
 func (f *AzureDevOpsMarkdown) Anchor(anchor string) string
@@ -122,7 +122,7 @@ func (f *AzureDevOpsMarkdown) Anchor(anchor string) string
 Anchor produces an anchor for the provided link.
 
 <a name="AzureDevOpsMarkdown.AnchorHeader"></a>
-### func \(\*AzureDevOpsMarkdown\) [AnchorHeader](<https://github.com/umats/gomarkdoc/blob/master/format/devops.go#L39>)
+### func \(\*AzureDevOpsMarkdown\) [AnchorHeader](<https://github.com/umats/gomarkdoc/blob/main/format/devops.go#L39>)
 
 ```go
 func (f *AzureDevOpsMarkdown) AnchorHeader(level int, text, anchor string) (string, error)
@@ -131,7 +131,7 @@ func (f *AzureDevOpsMarkdown) AnchorHeader(level int, text, anchor string) (stri
 AnchorHeader converts the provided text and custom anchor link into a header of the provided level. The level is expected to be at least 1.
 
 <a name="AzureDevOpsMarkdown.Bold"></a>
-### func \(\*AzureDevOpsMarkdown\) [Bold](<https://github.com/umats/gomarkdoc/blob/master/format/devops.go#L22>)
+### func \(\*AzureDevOpsMarkdown\) [Bold](<https://github.com/umats/gomarkdoc/blob/main/format/devops.go#L22>)
 
 ```go
 func (f *AzureDevOpsMarkdown) Bold(text string) (string, error)
@@ -140,7 +140,7 @@ func (f *AzureDevOpsMarkdown) Bold(text string) (string, error)
 Bold converts the provided text to bold.
 
 <a name="AzureDevOpsMarkdown.CodeBlock"></a>
-### func \(\*AzureDevOpsMarkdown\) [CodeBlock](<https://github.com/umats/gomarkdoc/blob/master/format/devops.go#L28>)
+### func \(\*AzureDevOpsMarkdown\) [CodeBlock](<https://github.com/umats/gomarkdoc/blob/main/format/devops.go#L28>)
 
 ```go
 func (f *AzureDevOpsMarkdown) CodeBlock(language, code string) (string, error)
@@ -149,7 +149,7 @@ func (f *AzureDevOpsMarkdown) CodeBlock(language, code string) (string, error)
 CodeBlock wraps the provided code as a code block and tags it with the provided language \(or no language if the empty string is provided\).
 
 <a name="AzureDevOpsMarkdown.CodeHref"></a>
-### func \(\*AzureDevOpsMarkdown\) [CodeHref](<https://github.com/umats/gomarkdoc/blob/master/format/devops.go#L86>)
+### func \(\*AzureDevOpsMarkdown\) [CodeHref](<https://github.com/umats/gomarkdoc/blob/main/format/devops.go#L86>)
 
 ```go
 func (f *AzureDevOpsMarkdown) CodeHref(loc lang.Location) (string, error)
@@ -158,7 +158,7 @@ func (f *AzureDevOpsMarkdown) CodeHref(loc lang.Location) (string, error)
 CodeHref generates an href to the provided code entry.
 
 <a name="AzureDevOpsMarkdown.Escape"></a>
-### func \(\*AzureDevOpsMarkdown\) [Escape](<https://github.com/umats/gomarkdoc/blob/master/format/devops.go#L160>)
+### func \(\*AzureDevOpsMarkdown\) [Escape](<https://github.com/umats/gomarkdoc/blob/main/format/devops.go#L160>)
 
 ```go
 func (f *AzureDevOpsMarkdown) Escape(text string) string
@@ -167,7 +167,7 @@ func (f *AzureDevOpsMarkdown) Escape(text string) string
 Escape escapes special markdown characters from the provided text.
 
 <a name="AzureDevOpsMarkdown.Header"></a>
-### func \(\*AzureDevOpsMarkdown\) [Header](<https://github.com/umats/gomarkdoc/blob/master/format/devops.go#L45>)
+### func \(\*AzureDevOpsMarkdown\) [Header](<https://github.com/umats/gomarkdoc/blob/main/format/devops.go#L45>)
 
 ```go
 func (f *AzureDevOpsMarkdown) Header(level int, text string) (string, error)
@@ -176,7 +176,7 @@ func (f *AzureDevOpsMarkdown) Header(level int, text string) (string, error)
 Header converts the provided text into a header of the provided level. The level is expected to be at least 1.
 
 <a name="AzureDevOpsMarkdown.Link"></a>
-### func \(\*AzureDevOpsMarkdown\) [Link](<https://github.com/umats/gomarkdoc/blob/master/format/devops.go#L124>)
+### func \(\*AzureDevOpsMarkdown\) [Link](<https://github.com/umats/gomarkdoc/blob/main/format/devops.go#L124>)
 
 ```go
 func (f *AzureDevOpsMarkdown) Link(text, href string) (string, error)
@@ -185,7 +185,7 @@ func (f *AzureDevOpsMarkdown) Link(text, href string) (string, error)
 Link generates a link with the given text and href values.
 
 <a name="AzureDevOpsMarkdown.ListEntry"></a>
-### func \(\*AzureDevOpsMarkdown\) [ListEntry](<https://github.com/umats/gomarkdoc/blob/master/format/devops.go#L131>)
+### func \(\*AzureDevOpsMarkdown\) [ListEntry](<https://github.com/umats/gomarkdoc/blob/main/format/devops.go#L131>)
 
 ```go
 func (f *AzureDevOpsMarkdown) ListEntry(depth int, text string) (string, error)
@@ -194,7 +194,7 @@ func (f *AzureDevOpsMarkdown) ListEntry(depth int, text string) (string, error)
 ListEntry generates an unordered list entry with the provided text at the provided zero\-indexed depth. A depth of 0 is considered the topmost level of list.
 
 <a name="AzureDevOpsMarkdown.LocalHref"></a>
-### func \(\*AzureDevOpsMarkdown\) [LocalHref](<https://github.com/umats/gomarkdoc/blob/master/format/devops.go#L68>)
+### func \(\*AzureDevOpsMarkdown\) [LocalHref](<https://github.com/umats/gomarkdoc/blob/main/format/devops.go#L68>)
 
 ```go
 func (f *AzureDevOpsMarkdown) LocalHref(headerText string) (string, error)
@@ -203,7 +203,7 @@ func (f *AzureDevOpsMarkdown) LocalHref(headerText string) (string, error)
 LocalHref generates an href for navigating to a header with the given headerText located within the same document as the href itself. Link generation follows the guidelines here: https://docs.microsoft.com/en-us/azure/devops/project/wiki/markdown-guidance?view=azure-devops#anchor-links
 
 <a name="AzureDevOpsMarkdown.RawAnchorHeader"></a>
-### func \(\*AzureDevOpsMarkdown\) [RawAnchorHeader](<https://github.com/umats/gomarkdoc/blob/master/format/devops.go#L52>)
+### func \(\*AzureDevOpsMarkdown\) [RawAnchorHeader](<https://github.com/umats/gomarkdoc/blob/main/format/devops.go#L52>)
 
 ```go
 func (f *AzureDevOpsMarkdown) RawAnchorHeader(level int, text, anchor string) (string, error)
@@ -212,7 +212,7 @@ func (f *AzureDevOpsMarkdown) RawAnchorHeader(level int, text, anchor string) (s
 RawAnchorHeader converts the provided text and custom anchor link into a header of the provided level without escaping the header text. The level is expected to be at least 1.
 
 <a name="AzureDevOpsMarkdown.RawHeader"></a>
-### func \(\*AzureDevOpsMarkdown\) [RawHeader](<https://github.com/umats/gomarkdoc/blob/master/format/devops.go#L58>)
+### func \(\*AzureDevOpsMarkdown\) [RawHeader](<https://github.com/umats/gomarkdoc/blob/main/format/devops.go#L58>)
 
 ```go
 func (f *AzureDevOpsMarkdown) RawHeader(level int, text string) (string, error)
@@ -221,7 +221,7 @@ func (f *AzureDevOpsMarkdown) RawHeader(level int, text string) (string, error)
 RawHeader converts the provided text into a header of the provided level without escaping the header text. The level is expected to be at least 1.
 
 <a name="AzureDevOpsMarkdown.RawLocalHref"></a>
-### func \(\*AzureDevOpsMarkdown\) [RawLocalHref](<https://github.com/umats/gomarkdoc/blob/master/format/devops.go#L81>)
+### func \(\*AzureDevOpsMarkdown\) [RawLocalHref](<https://github.com/umats/gomarkdoc/blob/main/format/devops.go#L81>)
 
 ```go
 func (f *AzureDevOpsMarkdown) RawLocalHref(anchor string) string
@@ -230,7 +230,7 @@ func (f *AzureDevOpsMarkdown) RawLocalHref(anchor string) string
 RawLocalHref generates an href within the same document but with a direct link provided instead of text to slugify.
 
 <a name="Format"></a>
-## type [Format](<https://github.com/umats/gomarkdoc/blob/master/format/format.go#L7-L77>)
+## type [Format](<https://github.com/umats/gomarkdoc/blob/main/format/format.go#L7-L77>)
 
 Format is a generic interface for formatting documentation contents in a particular way.
 
@@ -309,7 +309,7 @@ type Format interface {
 ```
 
 <a name="GitHubFlavoredMarkdown"></a>
-## type [GitHubFlavoredMarkdown](<https://github.com/umats/gomarkdoc/blob/master/format/github.go#L18>)
+## type [GitHubFlavoredMarkdown](<https://github.com/umats/gomarkdoc/blob/main/format/github.go#L18>)
 
 GitHubFlavoredMarkdown provides a Format which is compatible with GitHub Flavored Markdown's syntax and semantics. See GitHub's documentation for more details about their markdown format: https://guides.github.com/features/mastering-markdown/
 
@@ -318,7 +318,7 @@ type GitHubFlavoredMarkdown struct{}
 ```
 
 <a name="GitHubFlavoredMarkdown.Accordion"></a>
-### func \(\*GitHubFlavoredMarkdown\) [Accordion](<https://github.com/umats/gomarkdoc/blob/master/format/github.go#L140>)
+### func \(\*GitHubFlavoredMarkdown\) [Accordion](<https://github.com/umats/gomarkdoc/blob/main/format/github.go#L140>)
 
 ```go
 func (f *GitHubFlavoredMarkdown) Accordion(title, body string) (string, error)
@@ -327,7 +327,7 @@ func (f *GitHubFlavoredMarkdown) Accordion(title, body string) (string, error)
 Accordion generates a collapsible content. The accordion's visible title while collapsed is the provided title and the expanded content is the body.
 
 <a name="GitHubFlavoredMarkdown.AccordionHeader"></a>
-### func \(\*GitHubFlavoredMarkdown\) [AccordionHeader](<https://github.com/umats/gomarkdoc/blob/master/format/github.go#L151>)
+### func \(\*GitHubFlavoredMarkdown\) [AccordionHeader](<https://github.com/umats/gomarkdoc/blob/main/format/github.go#L151>)
 
 ```go
 func (f *GitHubFlavoredMarkdown) AccordionHeader(title string) (string, error)
@@ -342,7 +342,7 @@ accordion := format.AccordionHeader("Accordion Title") + "Accordion Body" + form
 ```
 
 <a name="GitHubFlavoredMarkdown.AccordionTerminator"></a>
-### func \(\*GitHubFlavoredMarkdown\) [AccordionTerminator](<https://github.com/umats/gomarkdoc/blob/master/format/github.go#L158>)
+### func \(\*GitHubFlavoredMarkdown\) [AccordionTerminator](<https://github.com/umats/gomarkdoc/blob/main/format/github.go#L158>)
 
 ```go
 func (f *GitHubFlavoredMarkdown) AccordionTerminator() (string, error)
@@ -351,7 +351,7 @@ func (f *GitHubFlavoredMarkdown) AccordionTerminator() (string, error)
 AccordionTerminator generates the code necessary to terminate an accordion after the body. It is expected to be used in conjunction with AccordionHeader\(\). See AccordionHeader for a full description.
 
 <a name="GitHubFlavoredMarkdown.Anchor"></a>
-### func \(\*GitHubFlavoredMarkdown\) [Anchor](<https://github.com/umats/gomarkdoc/blob/master/format/github.go#L32>)
+### func \(\*GitHubFlavoredMarkdown\) [Anchor](<https://github.com/umats/gomarkdoc/blob/main/format/github.go#L32>)
 
 ```go
 func (f *GitHubFlavoredMarkdown) Anchor(anchor string) string
@@ -360,7 +360,7 @@ func (f *GitHubFlavoredMarkdown) Anchor(anchor string) string
 Anchor produces an anchor for the provided link.
 
 <a name="GitHubFlavoredMarkdown.AnchorHeader"></a>
-### func \(\*GitHubFlavoredMarkdown\) [AnchorHeader](<https://github.com/umats/gomarkdoc/blob/master/format/github.go#L38>)
+### func \(\*GitHubFlavoredMarkdown\) [AnchorHeader](<https://github.com/umats/gomarkdoc/blob/main/format/github.go#L38>)
 
 ```go
 func (f *GitHubFlavoredMarkdown) AnchorHeader(level int, text, anchor string) (string, error)
@@ -369,7 +369,7 @@ func (f *GitHubFlavoredMarkdown) AnchorHeader(level int, text, anchor string) (s
 AnchorHeader converts the provided text and custom anchor link into a header of the provided level. The level is expected to be at least 1.
 
 <a name="GitHubFlavoredMarkdown.Bold"></a>
-### func \(\*GitHubFlavoredMarkdown\) [Bold](<https://github.com/umats/gomarkdoc/blob/master/format/github.go#L21>)
+### func \(\*GitHubFlavoredMarkdown\) [Bold](<https://github.com/umats/gomarkdoc/blob/main/format/github.go#L21>)
 
 ```go
 func (f *GitHubFlavoredMarkdown) Bold(text string) (string, error)
@@ -378,7 +378,7 @@ func (f *GitHubFlavoredMarkdown) Bold(text string) (string, error)
 Bold converts the provided text to bold.
 
 <a name="GitHubFlavoredMarkdown.CodeBlock"></a>
-### func \(\*GitHubFlavoredMarkdown\) [CodeBlock](<https://github.com/umats/gomarkdoc/blob/master/format/github.go#L27>)
+### func \(\*GitHubFlavoredMarkdown\) [CodeBlock](<https://github.com/umats/gomarkdoc/blob/main/format/github.go#L27>)
 
 ```go
 func (f *GitHubFlavoredMarkdown) CodeBlock(language, code string) (string, error)
@@ -387,7 +387,7 @@ func (f *GitHubFlavoredMarkdown) CodeBlock(language, code string) (string, error
 CodeBlock wraps the provided code as a code block and tags it with the provided language \(or no language if the empty string is provided\).
 
 <a name="GitHubFlavoredMarkdown.CodeHref"></a>
-### func \(\*GitHubFlavoredMarkdown\) [CodeHref](<https://github.com/umats/gomarkdoc/blob/master/format/github.go#L90>)
+### func \(\*GitHubFlavoredMarkdown\) [CodeHref](<https://github.com/umats/gomarkdoc/blob/main/format/github.go#L90>)
 
 ```go
 func (f *GitHubFlavoredMarkdown) CodeHref(loc lang.Location) (string, error)
@@ -396,7 +396,7 @@ func (f *GitHubFlavoredMarkdown) CodeHref(loc lang.Location) (string, error)
 CodeHref generates an href to the provided code entry.
 
 <a name="GitHubFlavoredMarkdown.Escape"></a>
-### func \(\*GitHubFlavoredMarkdown\) [Escape](<https://github.com/umats/gomarkdoc/blob/master/format/github.go#L163>)
+### func \(\*GitHubFlavoredMarkdown\) [Escape](<https://github.com/umats/gomarkdoc/blob/main/format/github.go#L163>)
 
 ```go
 func (f *GitHubFlavoredMarkdown) Escape(text string) string
@@ -405,7 +405,7 @@ func (f *GitHubFlavoredMarkdown) Escape(text string) string
 Escape escapes special markdown characters from the provided text.
 
 <a name="GitHubFlavoredMarkdown.Header"></a>
-### func \(\*GitHubFlavoredMarkdown\) [Header](<https://github.com/umats/gomarkdoc/blob/master/format/github.go#L44>)
+### func \(\*GitHubFlavoredMarkdown\) [Header](<https://github.com/umats/gomarkdoc/blob/main/format/github.go#L44>)
 
 ```go
 func (f *GitHubFlavoredMarkdown) Header(level int, text string) (string, error)
@@ -414,7 +414,7 @@ func (f *GitHubFlavoredMarkdown) Header(level int, text string) (string, error)
 Header converts the provided text into a header of the provided level. The level is expected to be at least 1.
 
 <a name="GitHubFlavoredMarkdown.Link"></a>
-### func \(\*GitHubFlavoredMarkdown\) [Link](<https://github.com/umats/gomarkdoc/blob/master/format/github.go#L85>)
+### func \(\*GitHubFlavoredMarkdown\) [Link](<https://github.com/umats/gomarkdoc/blob/main/format/github.go#L85>)
 
 ```go
 func (f *GitHubFlavoredMarkdown) Link(text, href string) (string, error)
@@ -423,7 +423,7 @@ func (f *GitHubFlavoredMarkdown) Link(text, href string) (string, error)
 Link generates a link with the given text and href values.
 
 <a name="GitHubFlavoredMarkdown.ListEntry"></a>
-### func \(\*GitHubFlavoredMarkdown\) [ListEntry](<https://github.com/umats/gomarkdoc/blob/master/format/github.go#L134>)
+### func \(\*GitHubFlavoredMarkdown\) [ListEntry](<https://github.com/umats/gomarkdoc/blob/main/format/github.go#L134>)
 
 ```go
 func (f *GitHubFlavoredMarkdown) ListEntry(depth int, text string) (string, error)
@@ -432,7 +432,7 @@ func (f *GitHubFlavoredMarkdown) ListEntry(depth int, text string) (string, erro
 ListEntry generates an unordered list entry with the provided text at the provided zero\-indexed depth. A depth of 0 is considered the topmost level of list.
 
 <a name="GitHubFlavoredMarkdown.LocalHref"></a>
-### func \(\*GitHubFlavoredMarkdown\) [LocalHref](<https://github.com/umats/gomarkdoc/blob/master/format/github.go#L68>)
+### func \(\*GitHubFlavoredMarkdown\) [LocalHref](<https://github.com/umats/gomarkdoc/blob/main/format/github.go#L68>)
 
 ```go
 func (f *GitHubFlavoredMarkdown) LocalHref(headerText string) (string, error)
@@ -441,7 +441,7 @@ func (f *GitHubFlavoredMarkdown) LocalHref(headerText string) (string, error)
 LocalHref generates an href for navigating to a header with the given headerText located within the same document as the href itself.
 
 <a name="GitHubFlavoredMarkdown.RawAnchorHeader"></a>
-### func \(\*GitHubFlavoredMarkdown\) [RawAnchorHeader](<https://github.com/umats/gomarkdoc/blob/master/format/github.go#L51>)
+### func \(\*GitHubFlavoredMarkdown\) [RawAnchorHeader](<https://github.com/umats/gomarkdoc/blob/main/format/github.go#L51>)
 
 ```go
 func (f *GitHubFlavoredMarkdown) RawAnchorHeader(level int, text, anchor string) (string, error)
@@ -450,7 +450,7 @@ func (f *GitHubFlavoredMarkdown) RawAnchorHeader(level int, text, anchor string)
 RawAnchorHeader converts the provided text and custom anchor link into a header of the provided level without escaping the header text. The level is expected to be at least 1.
 
 <a name="GitHubFlavoredMarkdown.RawHeader"></a>
-### func \(\*GitHubFlavoredMarkdown\) [RawHeader](<https://github.com/umats/gomarkdoc/blob/master/format/github.go#L57>)
+### func \(\*GitHubFlavoredMarkdown\) [RawHeader](<https://github.com/umats/gomarkdoc/blob/main/format/github.go#L57>)
 
 ```go
 func (f *GitHubFlavoredMarkdown) RawHeader(level int, text string) (string, error)
@@ -459,7 +459,7 @@ func (f *GitHubFlavoredMarkdown) RawHeader(level int, text string) (string, erro
 RawHeader converts the provided text into a header of the provided level without escaping the header text. The level is expected to be at least 1.
 
 <a name="GitHubFlavoredMarkdown.RawLocalHref"></a>
-### func \(\*GitHubFlavoredMarkdown\) [RawLocalHref](<https://github.com/umats/gomarkdoc/blob/master/format/github.go#L80>)
+### func \(\*GitHubFlavoredMarkdown\) [RawLocalHref](<https://github.com/umats/gomarkdoc/blob/main/format/github.go#L80>)
 
 ```go
 func (f *GitHubFlavoredMarkdown) RawLocalHref(anchor string) string
@@ -468,7 +468,7 @@ func (f *GitHubFlavoredMarkdown) RawLocalHref(anchor string) string
 RawLocalHref generates an href within the same document but with a direct link provided instead of text to slugify.
 
 <a name="GitLabFlavoredMarkdown"></a>
-## type [GitLabFlavoredMarkdown](<https://github.com/umats/gomarkdoc/blob/master/format/gitlab.go#L14-L16>)
+## type [GitLabFlavoredMarkdown](<https://github.com/umats/gomarkdoc/blob/main/format/gitlab.go#L14-L16>)
 
 GitLabFlavoredMarkdown provides a Format compatible with GitLab Flavored Markdown's syntax and semantics.
 
@@ -479,7 +479,7 @@ type GitLabFlavoredMarkdown struct {
 ```
 
 <a name="GitLabFlavoredMarkdown.CodeHref"></a>
-### func \(\*GitLabFlavoredMarkdown\) [CodeHref](<https://github.com/umats/gomarkdoc/blob/master/format/gitlab.go#L33>)
+### func \(\*GitLabFlavoredMarkdown\) [CodeHref](<https://github.com/umats/gomarkdoc/blob/main/format/gitlab.go#L33>)
 
 ```go
 func (f *GitLabFlavoredMarkdown) CodeHref(loc lang.Location) (string, error)
@@ -488,7 +488,7 @@ func (f *GitLabFlavoredMarkdown) CodeHref(loc lang.Location) (string, error)
 CodeHref generates a GitLab source link for the provided code entry.
 
 <a name="GitLabFlavoredMarkdown.LocalHref"></a>
-### func \(\*GitLabFlavoredMarkdown\) [LocalHref](<https://github.com/umats/gomarkdoc/blob/master/format/gitlab.go#L19>)
+### func \(\*GitLabFlavoredMarkdown\) [LocalHref](<https://github.com/umats/gomarkdoc/blob/main/format/gitlab.go#L19>)
 
 ```go
 func (f *GitLabFlavoredMarkdown) LocalHref(headerText string) (string, error)
@@ -497,7 +497,7 @@ func (f *GitLabFlavoredMarkdown) LocalHref(headerText string) (string, error)
 LocalHref generates a link to a heading within the same GitLab document.
 
 <a name="PlainMarkdown"></a>
-## type [PlainMarkdown](<https://github.com/umats/gomarkdoc/blob/master/format/plain.go#L13>)
+## type [PlainMarkdown](<https://github.com/umats/gomarkdoc/blob/main/format/plain.go#L13>)
 
 PlainMarkdown provides a Format which is compatible with the base Markdown format specification.
 
@@ -506,7 +506,7 @@ type PlainMarkdown struct{}
 ```
 
 <a name="PlainMarkdown.Accordion"></a>
-### func \(\*PlainMarkdown\) [Accordion](<https://github.com/umats/gomarkdoc/blob/master/format/plain.go#L88>)
+### func \(\*PlainMarkdown\) [Accordion](<https://github.com/umats/gomarkdoc/blob/main/format/plain.go#L88>)
 
 ```go
 func (f *PlainMarkdown) Accordion(title, body string) (string, error)
@@ -515,7 +515,7 @@ func (f *PlainMarkdown) Accordion(title, body string) (string, error)
 Accordion generates a collapsible content. Since accordions are not supported by plain markdown, this generates a level 6 header followed by a paragraph.
 
 <a name="PlainMarkdown.AccordionHeader"></a>
-### func \(\*PlainMarkdown\) [AccordionHeader](<https://github.com/umats/gomarkdoc/blob/master/format/plain.go#L106>)
+### func \(\*PlainMarkdown\) [AccordionHeader](<https://github.com/umats/gomarkdoc/blob/main/format/plain.go#L106>)
 
 ```go
 func (f *PlainMarkdown) AccordionHeader(title string) (string, error)
@@ -530,7 +530,7 @@ accordion := format.AccordionHeader("Accordion Title") + "Accordion Body" + form
 ```
 
 <a name="PlainMarkdown.AccordionTerminator"></a>
-### func \(\*PlainMarkdown\) [AccordionTerminator](<https://github.com/umats/gomarkdoc/blob/master/format/plain.go#L114>)
+### func \(\*PlainMarkdown\) [AccordionTerminator](<https://github.com/umats/gomarkdoc/blob/main/format/plain.go#L114>)
 
 ```go
 func (f *PlainMarkdown) AccordionTerminator() (string, error)
@@ -539,7 +539,7 @@ func (f *PlainMarkdown) AccordionTerminator() (string, error)
 AccordionTerminator generates the code necessary to terminate an accordion after the body. Since accordions are not supported in plain markdown, this completes a paragraph section. It is expected to be used in conjunction with AccordionHeader\(\). See AccordionHeader for a full description.
 
 <a name="PlainMarkdown.Anchor"></a>
-### func \(\*PlainMarkdown\) [Anchor](<https://github.com/umats/gomarkdoc/blob/master/format/plain.go#L27>)
+### func \(\*PlainMarkdown\) [Anchor](<https://github.com/umats/gomarkdoc/blob/main/format/plain.go#L27>)
 
 ```go
 func (f *PlainMarkdown) Anchor(anchor string) string
@@ -548,7 +548,7 @@ func (f *PlainMarkdown) Anchor(anchor string) string
 Anchor produces an anchor for the provided link.
 
 <a name="PlainMarkdown.AnchorHeader"></a>
-### func \(\*PlainMarkdown\) [AnchorHeader](<https://github.com/umats/gomarkdoc/blob/master/format/plain.go#L33>)
+### func \(\*PlainMarkdown\) [AnchorHeader](<https://github.com/umats/gomarkdoc/blob/main/format/plain.go#L33>)
 
 ```go
 func (f *PlainMarkdown) AnchorHeader(level int, text, anchor string) (string, error)
@@ -557,7 +557,7 @@ func (f *PlainMarkdown) AnchorHeader(level int, text, anchor string) (string, er
 AnchorHeader converts the provided text and custom anchor link into a header of the provided level. The level is expected to be at least 1.
 
 <a name="PlainMarkdown.Bold"></a>
-### func \(\*PlainMarkdown\) [Bold](<https://github.com/umats/gomarkdoc/blob/master/format/plain.go#L16>)
+### func \(\*PlainMarkdown\) [Bold](<https://github.com/umats/gomarkdoc/blob/main/format/plain.go#L16>)
 
 ```go
 func (f *PlainMarkdown) Bold(text string) (string, error)
@@ -566,7 +566,7 @@ func (f *PlainMarkdown) Bold(text string) (string, error)
 Bold converts the provided text to bold.
 
 <a name="PlainMarkdown.CodeBlock"></a>
-### func \(\*PlainMarkdown\) [CodeBlock](<https://github.com/umats/gomarkdoc/blob/master/format/plain.go#L22>)
+### func \(\*PlainMarkdown\) [CodeBlock](<https://github.com/umats/gomarkdoc/blob/main/format/plain.go#L22>)
 
 ```go
 func (f *PlainMarkdown) CodeBlock(language, code string) (string, error)
@@ -575,7 +575,7 @@ func (f *PlainMarkdown) CodeBlock(language, code string) (string, error)
 CodeBlock wraps the provided code as a code block. The provided language is ignored as it is not supported in plain markdown.
 
 <a name="PlainMarkdown.CodeHref"></a>
-### func \(\*PlainMarkdown\) [CodeHref](<https://github.com/umats/gomarkdoc/blob/master/format/plain.go#L70>)
+### func \(\*PlainMarkdown\) [CodeHref](<https://github.com/umats/gomarkdoc/blob/main/format/plain.go#L70>)
 
 ```go
 func (f *PlainMarkdown) CodeHref(loc lang.Location) (string, error)
@@ -584,7 +584,7 @@ func (f *PlainMarkdown) CodeHref(loc lang.Location) (string, error)
 CodeHref always returns the empty string, as there is no defined file linking format in standard markdown.
 
 <a name="PlainMarkdown.Escape"></a>
-### func \(\*PlainMarkdown\) [Escape](<https://github.com/umats/gomarkdoc/blob/master/format/plain.go#L119>)
+### func \(\*PlainMarkdown\) [Escape](<https://github.com/umats/gomarkdoc/blob/main/format/plain.go#L119>)
 
 ```go
 func (f *PlainMarkdown) Escape(text string) string
@@ -593,7 +593,7 @@ func (f *PlainMarkdown) Escape(text string) string
 Escape escapes special markdown characters from the provided text.
 
 <a name="PlainMarkdown.Header"></a>
-### func \(\*PlainMarkdown\) [Header](<https://github.com/umats/gomarkdoc/blob/master/format/plain.go#L39>)
+### func \(\*PlainMarkdown\) [Header](<https://github.com/umats/gomarkdoc/blob/main/format/plain.go#L39>)
 
 ```go
 func (f *PlainMarkdown) Header(level int, text string) (string, error)
@@ -602,7 +602,7 @@ func (f *PlainMarkdown) Header(level int, text string) (string, error)
 Header converts the provided text into a header of the provided level. The level is expected to be at least 1.
 
 <a name="PlainMarkdown.Link"></a>
-### func \(\*PlainMarkdown\) [Link](<https://github.com/umats/gomarkdoc/blob/master/format/plain.go#L75>)
+### func \(\*PlainMarkdown\) [Link](<https://github.com/umats/gomarkdoc/blob/main/format/plain.go#L75>)
 
 ```go
 func (f *PlainMarkdown) Link(text, href string) (string, error)
@@ -611,7 +611,7 @@ func (f *PlainMarkdown) Link(text, href string) (string, error)
 Link generates a link with the given text and href values.
 
 <a name="PlainMarkdown.ListEntry"></a>
-### func \(\*PlainMarkdown\) [ListEntry](<https://github.com/umats/gomarkdoc/blob/master/format/plain.go#L82>)
+### func \(\*PlainMarkdown\) [ListEntry](<https://github.com/umats/gomarkdoc/blob/main/format/plain.go#L82>)
 
 ```go
 func (f *PlainMarkdown) ListEntry(depth int, text string) (string, error)
@@ -620,7 +620,7 @@ func (f *PlainMarkdown) ListEntry(depth int, text string) (string, error)
 ListEntry generates an unordered list entry with the provided text at the provided zero\-indexed depth. A depth of 0 is considered the topmost level of list.
 
 <a name="PlainMarkdown.LocalHref"></a>
-### func \(\*PlainMarkdown\) [LocalHref](<https://github.com/umats/gomarkdoc/blob/master/format/plain.go#L58>)
+### func \(\*PlainMarkdown\) [LocalHref](<https://github.com/umats/gomarkdoc/blob/main/format/plain.go#L58>)
 
 ```go
 func (f *PlainMarkdown) LocalHref(headerText string) (string, error)
@@ -629,7 +629,7 @@ func (f *PlainMarkdown) LocalHref(headerText string) (string, error)
 LocalHref always returns the empty string, as header links are not supported in plain markdown.
 
 <a name="PlainMarkdown.RawAnchorHeader"></a>
-### func \(\*PlainMarkdown\) [RawAnchorHeader](<https://github.com/umats/gomarkdoc/blob/master/format/plain.go#L46>)
+### func \(\*PlainMarkdown\) [RawAnchorHeader](<https://github.com/umats/gomarkdoc/blob/main/format/plain.go#L46>)
 
 ```go
 func (f *PlainMarkdown) RawAnchorHeader(level int, text, anchor string) (string, error)
@@ -638,7 +638,7 @@ func (f *PlainMarkdown) RawAnchorHeader(level int, text, anchor string) (string,
 RawAnchorHeader converts the provided text and custom anchor link into a header of the provided level without escaping the header text. The level is expected to be at least 1.
 
 <a name="PlainMarkdown.RawHeader"></a>
-### func \(\*PlainMarkdown\) [RawHeader](<https://github.com/umats/gomarkdoc/blob/master/format/plain.go#L52>)
+### func \(\*PlainMarkdown\) [RawHeader](<https://github.com/umats/gomarkdoc/blob/main/format/plain.go#L52>)
 
 ```go
 func (f *PlainMarkdown) RawHeader(level int, text string) (string, error)
@@ -647,7 +647,7 @@ func (f *PlainMarkdown) RawHeader(level int, text string) (string, error)
 RawHeader converts the provided text into a header of the provided level without escaping the header text. The level is expected to be at least 1.
 
 <a name="PlainMarkdown.RawLocalHref"></a>
-### func \(\*PlainMarkdown\) [RawLocalHref](<https://github.com/umats/gomarkdoc/blob/master/format/plain.go#L64>)
+### func \(\*PlainMarkdown\) [RawLocalHref](<https://github.com/umats/gomarkdoc/blob/main/format/plain.go#L64>)
 
 ```go
 func (f *PlainMarkdown) RawLocalHref(anchor string) string

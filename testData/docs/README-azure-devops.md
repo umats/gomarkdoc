@@ -113,7 +113,7 @@ var Var = 2
 ```
 
 <a name="Func"></a>
-## func [Func](<https://github.com/umats/gomarkdoc?path=testData%2Fdocs%2Fdocs.go&version=GBmaster&lineStyle=plain&line=67&lineEnd=67&lineStartColumn=1&lineEndColumn=25>)
+## func [Func](<https://github.com/umats/gomarkdoc?path=testData%2Fdocs%2Fdocs.go&version=GBmain&lineStyle=plain&line=67&lineEnd=67&lineStartColumn=1&lineEndColumn=25>)
 
 ```go
 func Func(param int) int
@@ -122,7 +122,7 @@ func Func(param int) int
 Func is present in this file.
 
 <a name="AnotherStruct"></a>
-## type [AnotherStruct](<https://github.com/umats/gomarkdoc?path=testData%2Fdocs%2FanotherFile.go&version=GBmaster&lineStyle=plain&line=5&lineEnd=7&lineStartColumn=1&lineEndColumn=2>)
+## type [AnotherStruct](<https://github.com/umats/gomarkdoc?path=testData%2Fdocs%2FanotherFile.go&version=GBmain&lineStyle=plain&line=5&lineEnd=7&lineStartColumn=1&lineEndColumn=2>)
 
 AnotherStruct has methods like [\\\*AnotherStruct.GetField](<#AnotherStruct.GetField>) and also has an initializer called [NewAnotherStruct](<#NewAnotherStruct>).
 
@@ -133,7 +133,7 @@ type AnotherStruct struct {
 ```
 
 <a name="NewAnotherStruct"></a>
-### func [NewAnotherStruct](<https://github.com/umats/gomarkdoc?path=testData%2Fdocs%2FanotherFile.go&version=GBmaster&lineStyle=plain&line=10&lineEnd=10&lineStartColumn=1&lineEndColumn=39>)
+### func [NewAnotherStruct](<https://github.com/umats/gomarkdoc?path=testData%2Fdocs%2FanotherFile.go&version=GBmain&lineStyle=plain&line=10&lineEnd=10&lineStartColumn=1&lineEndColumn=39>)
 
 ```go
 func NewAnotherStruct() *AnotherStruct
@@ -142,7 +142,7 @@ func NewAnotherStruct() *AnotherStruct
 NewAnotherStruct makes [\\\*AnotherStruct](<#AnotherStruct>).
 
 <a name="AnotherStruct.GetField"></a>
-### func \(\*AnotherStruct\) [GetField](<https://github.com/umats/gomarkdoc?path=testData%2Fdocs%2FanotherFile.go&version=GBmaster&lineStyle=plain&line=17&lineEnd=17&lineStartColumn=1&lineEndColumn=42>)
+### func \(\*AnotherStruct\) [GetField](<https://github.com/umats/gomarkdoc?path=testData%2Fdocs%2FanotherFile.go&version=GBmain&lineStyle=plain&line=17&lineEnd=17&lineStartColumn=1&lineEndColumn=42>)
 
 ```go
 func (s *AnotherStruct) GetField() string
@@ -151,7 +151,7 @@ func (s *AnotherStruct) GetField() string
 GetField gets [\\\*AnotherStruct.Field](<#AnotherStruct>).
 
 <a name="Type"></a>
-## type [Type](<https://github.com/umats/gomarkdoc?path=testData%2Fdocs%2Fdocs.go&version=GBmaster&lineStyle=plain&line=72&lineEnd=72&lineStartColumn=1&lineEndColumn=19>)
+## type [Type](<https://github.com/umats/gomarkdoc?path=testData%2Fdocs%2Fdocs.go&version=GBmain&lineStyle=plain&line=72&lineEnd=72&lineStartColumn=1&lineEndColumn=19>)
 
 Type is a type in this file.
 
@@ -160,7 +160,7 @@ type Type struct{}
 ```
 
 <a name="Type.Func"></a>
-### func \(\*Type\) [Func](<https://github.com/umats/gomarkdoc?path=testData%2Fdocs%2Fdocs.go&version=GBmaster&lineStyle=plain&line=75&lineEnd=75&lineStartColumn=1&lineEndColumn=22>)
+### func \(\*Type\) [Func](<https://github.com/umats/gomarkdoc?path=testData%2Fdocs%2Fdocs.go&version=GBmain&lineStyle=plain&line=75&lineEnd=75&lineStartColumn=1&lineEndColumn=22>)
 
 ```go
 func (t *Type) Func()

@@ -11,7 +11,7 @@ Use `docs`, `chore`, `refactor`, `style`, or `test` when appropriate.
 ## Git Workflow
 
 ALWAYS work on a feature branch.
-NEVER work directly on `main` or `master`.
+NEVER work directly on `main`.
 Use `specs/state.yaml` as the workflow-mode signal.
 Use `solo-git` workflow mode unless the user selects team PR workflow.
 

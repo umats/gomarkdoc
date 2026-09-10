@@ -131,12 +131,12 @@ func TestGitHubFlavoredMarkdown_CodeHref(t *testing.T) {
 		WorkDir:  wd,
 		Repo: &lang.Repo{
 			Remote:        "https://dev.azure.com/org/project/_git/repo",
-			DefaultBranch: "master",
+			DefaultBranch: "main",
 			PathFromRoot:  "/",
 		},
 	})
 	is.NoErr(err)
-	is.Equal(res, "https://dev.azure.com/org/project/_git/repo/blob/master/subdir/file.go#L12-L14")
+	is.Equal(res, "https://dev.azure.com/org/project/_git/repo/blob/main/subdir/file.go#L12-L14")
 }
 
 func TestGitHubFlavoredMarkdown_CodeHref_noRepo(t *testing.T) {

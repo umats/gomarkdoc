@@ -19,7 +19,7 @@ Package embed tests out embedding of documentation in an existing readme.
 
 
 <a name="EmbeddedFunc"></a>
-## func [EmbeddedFunc](<https://github.com/umats/gomarkdoc?path=testData%2Fembed%2Fembed.go&version=GBmaster&lineStyle=plain&line=6&lineEnd=6&lineStartColumn=1&lineEndColumn=33>)
+## func [EmbeddedFunc](<https://github.com/umats/gomarkdoc?path=testData%2Fembed%2Fembed.go&version=GBmain&lineStyle=plain&line=6&lineEnd=6&lineStartColumn=1&lineEndColumn=33>)
 
 ```go
 func EmbeddedFunc(param int) int
@@ -53,7 +53,7 @@ Package embed tests out embedding of documentation in an existing readme.
 
 
 <a name="EmbeddedFunc"></a>
-## func [EmbeddedFunc](<https://github.com/umats/gomarkdoc?path=testData%2Fembed%2Fembed.go&version=GBmaster&lineStyle=plain&line=6&lineEnd=6&lineStartColumn=1&lineEndColumn=33>)
+## func [EmbeddedFunc](<https://github.com/umats/gomarkdoc?path=testData%2Fembed%2Fembed.go&version=GBmain&lineStyle=plain&line=6&lineEnd=6&lineStartColumn=1&lineEndColumn=33>)
 
 ```go
 func EmbeddedFunc(param int) int
@@ -87,7 +87,7 @@ Package embed tests out embedding of documentation in an existing readme.
 
 
 <a name="EmbeddedFunc"></a>
-## func [EmbeddedFunc](<https://github.com/umats/gomarkdoc?path=testData%2Fembed%2Fembed.go&version=GBmaster&lineStyle=plain&line=6&lineEnd=6&lineStartColumn=1&lineEndColumn=33>)
+## func [EmbeddedFunc](<https://github.com/umats/gomarkdoc?path=testData%2Fembed%2Fembed.go&version=GBmain&lineStyle=plain&line=6&lineEnd=6&lineStartColumn=1&lineEndColumn=33>)
 
 ```go
 func EmbeddedFunc(param int) int

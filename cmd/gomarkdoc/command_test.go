@@ -34,7 +34,7 @@ func TestCommand(t *testing.T) {
 			harness(t, test, []string{
 				"gomarkdoc", test,
 				"--repository.url", "https://github.com/umats/gomarkdoc",
-				"--repository.default-branch", "master",
+				"--repository.default-branch", "main",
 				"--repository.path", "/testData/",
 			})
 		})
@@ -67,7 +67,7 @@ func TestCommand_check(t *testing.T) {
 		"-c",
 		"-o", "{{.Dir}}/README-github.md",
 		"--repository.url", "https://github.com/umats/gomarkdoc",
-		"--repository.default-branch", "master",
+		"--repository.default-branch", "main",
 		"--repository.path", "/testData/",
 	}
 	cleanup(t, "simple")
@@ -85,7 +85,7 @@ func TestCommand_nested(t *testing.T) {
 		"gomarkdoc", "./nested/...",
 		"-o", "{{.Dir}}/README-github-test.md",
 		"--repository.url", "https://github.com/umats/gomarkdoc",
-		"--repository.default-branch", "master",
+		"--repository.default-branch", "main",
 		"--repository.path", "/testData/",
 	}
 	cleanup(t, "nested")
@@ -108,7 +108,7 @@ func TestCommand_unexported(t *testing.T) {
 		"-u",
 		"-o", "{{.Dir}}/README-test.md",
 		"--repository.url", "https://github.com/umats/gomarkdoc",
-		"--repository.default-branch", "master",
+		"--repository.default-branch", "main",
 		"--repository.path", "/testData/",
 	})
 }
@@ -145,7 +145,7 @@ func TestCommand_invalidCheck(t *testing.T) {
 		"gomarkdoc", "./simple",
 		"-c",
 		"--repository.url", "https://github.com/umats/gomarkdoc",
-		"--repository.default-branch", "master",
+		"--repository.default-branch", "main",
 		"--repository.path", "/testData/",
 	}
 	cleanup(t, "simple")
@@ -166,7 +166,7 @@ func TestCommand_defaultDirectory(t *testing.T) {
 	harness(t, ".", []string{
 		"gomarkdoc",
 		"--repository.url", "https://github.com/umats/gomarkdoc",
-		"--repository.default-branch", "master",
+		"--repository.default-branch", "main",
 		"--repository.path", "/testData/simple/",
 	})
 }
@@ -181,7 +181,7 @@ func TestCommand_nonexistant(t *testing.T) {
 		"gomarkdoc", "./nonexistant",
 		"-o", "{{.Dir}}/README-test.md",
 		"--repository.url", "https://github.com/umats/gomarkdoc",
-		"--repository.default-branch", "master",
+		"--repository.default-branch", "main",
 		"--repository.path", "/testData/",
 	}
 
@@ -201,7 +201,7 @@ func TestCommand_tags(t *testing.T) {
 		"gomarkdoc", "./tags",
 		"--tags", "tagged",
 		"--repository.url", "https://github.com/umats/gomarkdoc",
-		"--repository.default-branch", "master",
+		"--repository.default-branch", "main",
 		"--repository.path", "/testData/",
 	})
 }
@@ -218,7 +218,7 @@ func TestCommand_tagsWithGOFLAGS(t *testing.T) {
 		"--config", "../.gomarkdoc-empty.yml",
 		"-o", "{{.Dir}}/README-github-test.md",
 		"--repository.url", "https://github.com/umats/gomarkdoc",
-		"--repository.default-branch", "master",
+		"--repository.default-branch", "main",
 		"--repository.path", "/testData/",
 	}
 	cleanup(t, "tags")
@@ -244,7 +244,7 @@ func TestCommand_tagsWithGOFLAGSNoTags(t *testing.T) {
 		"--config", "../.gomarkdoc-empty.yml",
 		"-o", "{{.Dir}}/README-github-test.md",
 		"--repository.url", "https://github.com/umats/gomarkdoc",
-		"--repository.default-branch", "master",
+		"--repository.default-branch", "main",
 		"--repository.path", "/testData/",
 	}
 	cleanup(t, "tags")
@@ -270,7 +270,7 @@ func TestCommand_tagsWithGOFLAGSNoParse(t *testing.T) {
 		"--config", "../.gomarkdoc-empty.yml",
 		"-o", "{{.Dir}}/README-github-test.md",
 		"--repository.url", "https://github.com/umats/gomarkdoc",
-		"--repository.default-branch", "master",
+		"--repository.default-branch", "main",
 		"--repository.path", "/testData/",
 	}
 	cleanup(t, "tags")
@@ -293,7 +293,7 @@ func TestCommand_embed(t *testing.T) {
 		"--embed",
 		"-o", "{{.Dir}}/README-github-test.md",
 		"--repository.url", "https://github.com/umats/gomarkdoc",
-		"--repository.default-branch", "master",
+		"--repository.default-branch", "main",
 		"--repository.path", "/testData/",
 	}
 	cleanup(t, "embed")
@@ -321,7 +321,7 @@ func TestCommand_embed_check(t *testing.T) {
 		"--check",
 		"-o", "{{.Dir}}/README-github-invalid.md",
 		"--repository.url", "https://github.com/umats/gomarkdoc",
-		"--repository.default-branch", "master",
+		"--repository.default-branch", "main",
 		"--repository.path", "/testData/",
 	}
 	cleanup(t, "embed")
@@ -339,7 +339,7 @@ func TestCommand_embed_check(t *testing.T) {
 		"--check",
 		"-o", "{{.Dir}}/README-github.md",
 		"--repository.url", "https://github.com/umats/gomarkdoc",
-		"--repository.default-branch", "master",
+		"--repository.default-branch", "main",
 		"--repository.path", "/testData/",
 	}
 	cleanup(t, "embed")

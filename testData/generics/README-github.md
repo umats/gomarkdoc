@@ -16,7 +16,7 @@ import "github.com/umats/gomarkdoc/testData/generics"
 
 
 <a name="Func"></a>
-## func [Func](<https://github.com/umats/gomarkdoc/blob/master/testData/generics/generics.go#L17>)
+## func [Func](<https://github.com/umats/gomarkdoc/blob/main/testData/generics/generics.go#L17>)
 
 ```go
 func Func[S int | float64](s S) S
@@ -25,7 +25,7 @@ func Func[S int | float64](s S) S
 Func is a generic function.
 
 <a name="Generic"></a>
-## type [Generic](<https://github.com/umats/gomarkdoc/blob/master/testData/generics/generics.go#L4-L6>)
+## type [Generic](<https://github.com/umats/gomarkdoc/blob/main/testData/generics/generics.go#L4-L6>)
 
 Generic is a generic struct.
 
@@ -36,7 +36,7 @@ type Generic[T any] struct {
 ```
 
 <a name="NewGeneric"></a>
-### func [NewGeneric](<https://github.com/umats/gomarkdoc/blob/master/testData/generics/generics.go#L9>)
+### func [NewGeneric](<https://github.com/umats/gomarkdoc/blob/main/testData/generics/generics.go#L9>)
 
 ```go
 func NewGeneric[T any](param T) Generic[T]
@@ -45,7 +45,7 @@ func NewGeneric[T any](param T) Generic[T]
 NewGeneric produces a new [Generic](<#Generic>) struct.
 
 <a name="Generic[T].Method"></a>
-### func \(Generic\[T\]\) [Method](<https://github.com/umats/gomarkdoc/blob/master/testData/generics/generics.go#L14>)
+### func \(Generic\[T\]\) [Method](<https://github.com/umats/gomarkdoc/blob/main/testData/generics/generics.go#L14>)
 
 ```go
 func (g Generic[T]) Method()
