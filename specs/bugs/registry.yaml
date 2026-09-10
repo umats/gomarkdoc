@@ -1,0 +1,9 @@
+bugs:
+  - bug_id: BUG-2026-09-10T103348Z
+    date: 2026-09-10
+    severity: medium
+    priority: high
+    scope: package-discovery
+    summary: Recursive discovery rejects test-only directories.
+    file: specs/bugs/BUG-2026-09-10T103348Z-skip-test-only-packages.md
+    status: fixed

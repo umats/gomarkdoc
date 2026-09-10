@@ -1,0 +1,17 @@
+feature_name: Native GitLab Flavored Markdown support
+problem_statement: gomarkdoc currently targets GitHub, Azure DevOps, and plain Markdown, so GitLab users receive incompatible heading links and repository source links unless they manually override templates.
+constraints:
+  - Reuse the existing Format interface and repository URL metadata.
+  - Add no dependency.
+  - Support GitLab.com and self-hosted GitLab instances.
+out_of_scope:
+  - Automatically select a format from the Git remote.
+  - GitLab API, authentication, and publishing support.
+  - Changes to existing output formats.
+key_decisions:
+  - decision: Add GitLab as an explicit format selection.
+    rationale: It matches the existing user-controlled format model.
+  - decision: Use the existing repository URL as the GitLab instance base.
+    rationale: It supports GitLab.com and self-hosted instances without host configuration.
+  - decision: Let GitLab render duplicate heading suffixes.
+    rationale: The renderer has no context for arbitrary user-document headings; GitLab already supplies the documented -1, -2 suffixes.

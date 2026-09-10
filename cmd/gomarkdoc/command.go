@@ -155,7 +155,7 @@ func buildCommand() *cobra.Command {
 		"format",
 		"f",
 		"github",
-		"Format to use for writing output data. Valid options: github (default), azure-devops, plain",
+		"Format to use for writing output data. Valid options: github (default), gitlab, azure-devops, plain",
 	)
 	command.Flags().StringToStringVarP(
 		&opts.templateOverrides,
@@ -369,6 +369,8 @@ func resolveOverrides(opts commandOptions) ([]gomarkdoc.RendererOption, error) {
 	switch opts.format {
 	case "github":
 		f = &format.GitHubFlavoredMarkdown{}
+	case "gitlab":
+		f = &format.GitLabFlavoredMarkdown{}
 	case "azure-devops":
 		f = &format.AzureDevOpsMarkdown{}
 	case "plain":
@@ -429,6 +431,11 @@ func loadPackages(specs []*PackageSpec, opts commandOptions) error {
 			}
 
 			return err
+		}
+
+		// Test-only directories have no source package to document.
+		if spec.isWildcard && len(buildPkg.GoFiles) == 0 && len(buildPkg.CgoFiles) == 0 {
+			continue
 		}
 
 		var pkgOpts []lang.PackageOption

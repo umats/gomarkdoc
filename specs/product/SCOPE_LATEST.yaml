@@ -1,0 +1,44 @@
+core_value: Generate documentation that renders correctly in GitLab without manual template overrides.
+summary: |
+  Add GitLab Flavored Markdown as a supported output format alongside GitHub,
+  Azure DevOps, and plain Markdown. Users can select it through the existing
+  format configuration and receive GitLab-compatible links and markup.
+
+  Support GitLab.com and self-managed GitLab instances through the repository
+  URL already detected or configured by gomarkdoc.
+in_scope:
+  - id: e01s01
+    item: Select GitLab as an output format from the CLI and configuration.
+  - id: e01s02
+    item: Render generated anchors, source links, and collapsible content for GitLab.
+  - id: e01s03
+    item: Cover GitLab-specific output and preserve existing format behavior.
+out_of_scope:
+  - item: Automatically select an output format from the Git remote.
+    reason: Users already select formats explicitly; automatic detection is separate behavior.
+  - item: Add GitLab API, authentication, or publishing support.
+    reason: gomarkdoc only renders documentation.
+  - item: Change GitHub, Azure DevOps, or plain Markdown output.
+    reason: Existing formats must remain compatible.
+constraints:
+  - Reuse the existing format.Format extension point and repository metadata.
+  - Add no dependency for Markdown rendering.
+  - Keep support compatible with GitLab.com and self-managed GitLab URLs.
+success_criteria:
+  - The CLI accepts gitlab as a format value.
+  - Generated GitLab output has valid GitLab heading anchors and source links.
+  - Duplicate user-document headings use GitLab-rendered numeric suffixes.
+  - GitLab-specific behavior has focused automated tests.
+  - Existing format tests remain green.
+references:
+  - specs/tech-architecture/tech-stack.md
+  - https://docs.gitlab.com/18.8/user/markdown/
+prior_art:
+  - candidate: Existing GitHubFlavoredMarkdown and AzureDevOpsMarkdown formats
+    source: format/github.go; format/devops.go
+    verdict: extend
+    notes: The existing Format interface already isolates host-specific markup and links.
+  - candidate: GitLab Flavored Markdown documentation
+    source: https://docs.gitlab.com/18.8/user/markdown/
+    verdict: build
+    notes: GitLab heading IDs lowercase text, remove non-word text, collapse hyphens, and suffix duplicates; details and summary are allowed HTML.

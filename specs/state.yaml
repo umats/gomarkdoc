@@ -1,1 +1,12 @@
 workflow_mode: solo-git
+active_flow: orchestrate-project
+active_epic_id: e01
+active_story_id: e01s01
+project_cycle:
+  current_phase: 6
+  completed_phases: [1, 2, 3, 4, 5]
+metrics:
+  story_start: 2026-09-10T12:19:31+02:00
+handoff:
+  next_skill: release-branch
+  status: ready_for_release

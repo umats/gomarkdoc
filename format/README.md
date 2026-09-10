@@ -48,6 +48,9 @@ Each of the formats in this package contains the same set of formatting function
   - [func \(f \*GitHubFlavoredMarkdown\) RawAnchorHeader\(level int, text, anchor string\) \(string, error\)](<#GitHubFlavoredMarkdown.RawAnchorHeader>)
   - [func \(f \*GitHubFlavoredMarkdown\) RawHeader\(level int, text string\) \(string, error\)](<#GitHubFlavoredMarkdown.RawHeader>)
   - [func \(f \*GitHubFlavoredMarkdown\) RawLocalHref\(anchor string\) string](<#GitHubFlavoredMarkdown.RawLocalHref>)
+- [type GitLabFlavoredMarkdown](<#GitLabFlavoredMarkdown>)
+  - [func \(f \*GitLabFlavoredMarkdown\) CodeHref\(loc lang.Location\) \(string, error\)](<#GitLabFlavoredMarkdown.CodeHref>)
+  - [func \(f \*GitLabFlavoredMarkdown\) LocalHref\(headerText string\) \(string, error\)](<#GitLabFlavoredMarkdown.LocalHref>)
 - [type PlainMarkdown](<#PlainMarkdown>)
   - [func \(f \*PlainMarkdown\) Accordion\(title, body string\) \(string, error\)](<#PlainMarkdown.Accordion>)
   - [func \(f \*PlainMarkdown\) AccordionHeader\(title string\) \(string, error\)](<#PlainMarkdown.AccordionHeader>)
@@ -463,6 +466,35 @@ func (f *GitHubFlavoredMarkdown) RawLocalHref(anchor string) string
 ```
 
 RawLocalHref generates an href within the same document but with a direct link provided instead of text to slugify.
+
+<a name="GitLabFlavoredMarkdown"></a>
+## type [GitLabFlavoredMarkdown](<https://github.com/umats/gomarkdoc/blob/master/format/gitlab.go#L14-L16>)
+
+GitLabFlavoredMarkdown provides a Format compatible with GitLab Flavored Markdown's syntax and semantics.
+
+```go
+type GitLabFlavoredMarkdown struct {
+    GitHubFlavoredMarkdown
+}
+```
+
+<a name="GitLabFlavoredMarkdown.CodeHref"></a>
+### func \(\*GitLabFlavoredMarkdown\) [CodeHref](<https://github.com/umats/gomarkdoc/blob/master/format/gitlab.go#L33>)
+
+```go
+func (f *GitLabFlavoredMarkdown) CodeHref(loc lang.Location) (string, error)
+```
+
+CodeHref generates a GitLab source link for the provided code entry.
+
+<a name="GitLabFlavoredMarkdown.LocalHref"></a>
+### func \(\*GitLabFlavoredMarkdown\) [LocalHref](<https://github.com/umats/gomarkdoc/blob/master/format/gitlab.go#L19>)
+
+```go
+func (f *GitLabFlavoredMarkdown) LocalHref(headerText string) (string, error)
+```
+
+LocalHref generates a link to a heading within the same GitLab document.
 
 <a name="PlainMarkdown"></a>
 ## type [PlainMarkdown](<https://github.com/umats/gomarkdoc/blob/master/format/plain.go#L13>)

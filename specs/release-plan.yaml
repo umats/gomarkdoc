@@ -1,0 +1,18 @@
+release:
+  version: unreleased
+  codename: GitLab Markdown
+  status: planning
+  semantic_release: true
+  bump_hint: minor
+epics:
+  - id: e01
+    title: GitLab Markdown format
+    wsjf: 3.0
+    capsule_dir: epics/e01-gitlab-markdown
+bugs:
+  total: 1
+  fixed: 1
+  deferred: 0
+  wontfix: 0
+  open: 0
+  registry: specs/bugs/registry.yaml
