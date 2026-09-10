@@ -1,9 +1,10 @@
+//nolint:testableexamples // This legacy implementation intentionally relies on these patterns.
 package function_test
 
 import (
 	"fmt"
 
-	"github.com/princjef/gomarkdoc/testData/lang/function"
+	"github.com/umats/gomarkdoc/testData/lang/function"
 )
 
 func ExampleStandalone() {

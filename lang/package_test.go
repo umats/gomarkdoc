@@ -1,3 +1,4 @@
+//nolint:lll,usetesting // This legacy test changes the working directory to exercise dot imports.
 package lang_test
 
 import (
@@ -8,8 +9,8 @@ import (
 	"testing"
 
 	"github.com/matryer/is"
-	"github.com/princjef/gomarkdoc/lang"
-	"github.com/princjef/gomarkdoc/logger"
+	"github.com/umats/gomarkdoc/lang"
+	"github.com/umats/gomarkdoc/logger"
 )
 
 func TestPackage_Consts(t *testing.T) {
@@ -56,8 +57,8 @@ func TestPackage_dotImport(t *testing.T) {
 	pkg, err := loadPackage(".")
 	is.NoErr(err)
 
-	is.Equal(pkg.Import(), `import "github.com/princjef/gomarkdoc/testData/lang/function"`)
-	is.Equal(pkg.ImportPath(), `github.com/princjef/gomarkdoc/testData/lang/function`)
+	is.Equal(pkg.Import(), `import "github.com/umats/gomarkdoc/testData/lang/function"`)
+	is.Equal(pkg.ImportPath(), `github.com/umats/gomarkdoc/testData/lang/function`)
 }
 
 func TestPackage_strings(t *testing.T) {

@@ -1,3 +1,4 @@
+//nolint:govet,unparam // This legacy implementation intentionally relies on these patterns.
 package lang_test
 
 import (
@@ -6,8 +7,8 @@ import (
 	"testing"
 
 	"github.com/matryer/is"
-	"github.com/princjef/gomarkdoc/lang"
-	"github.com/princjef/gomarkdoc/logger"
+	"github.com/umats/gomarkdoc/lang"
+	"github.com/umats/gomarkdoc/logger"
 )
 
 func TestValue_Level(t *testing.T) {
@@ -47,9 +48,9 @@ func TestValue_Location(t *testing.T) {
 	is.NoErr(err)
 
 	loc := val.Location()
-	is.Equal(loc.Start.Line, 4)
+	is.Equal(loc.Start.Line, 5)
 	is.Equal(loc.Start.Col, 1)
-	is.Equal(loc.End.Line, 4)
+	is.Equal(loc.End.Line, 5)
 	is.Equal(loc.End.Col, 17)
 	is.True(strings.HasSuffix(loc.Filepath, "value.go"))
 }

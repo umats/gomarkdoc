@@ -1,13 +1,15 @@
+//nolint:exhaustive,intrange,wrapcheck // This legacy implementation intentionally relies on these patterns.
 package gomarkdoc
 
 import (
 	"fmt"
+	"maps"
 	"reflect"
 	"strings"
 	"text/template"
 
-	"github.com/princjef/gomarkdoc/format"
-	"github.com/princjef/gomarkdoc/lang"
+	"github.com/umats/gomarkdoc/format"
+	"github.com/umats/gomarkdoc/lang"
 )
 
 type (
@@ -139,7 +141,7 @@ func (out *Renderer) Example(ex *lang.Example) (string, error) {
 // writeTemplate renders the template of the provided name using the provided
 // data object to a string. It uses the set of templates provided to the
 // renderer as a template library.
-func (out *Renderer) writeTemplate(name string, data interface{}) (string, error) {
+func (out *Renderer) writeTemplate(name string, data any) (string, error) {
 	var result strings.Builder
 	if err := out.tmpl.ExecuteTemplate(&result, name, data); err != nil {
 		return "", err
@@ -219,9 +221,7 @@ func (out *Renderer) getTemplate(name string) *template.Template {
 		"escape":              out.format.Escape,
 	}
 
-	for n, f := range out.templateFuncs {
-		baseTemplateFuncs[n] = f
-	}
+	maps.Copy(baseTemplateFuncs, out.templateFuncs)
 
 	tmpl.Funcs(baseTemplateFuncs)
 	return tmpl

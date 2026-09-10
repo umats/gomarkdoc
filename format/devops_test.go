@@ -1,3 +1,4 @@
+//nolint:lll // This legacy implementation intentionally relies on these patterns.
 package format_test
 
 import (
@@ -6,8 +7,8 @@ import (
 	"testing"
 
 	"github.com/matryer/is"
-	"github.com/princjef/gomarkdoc/format"
-	"github.com/princjef/gomarkdoc/lang"
+	"github.com/umats/gomarkdoc/format"
+	"github.com/umats/gomarkdoc/lang"
 )
 
 func TestBold(t *testing.T) {

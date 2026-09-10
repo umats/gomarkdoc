@@ -1,3 +1,4 @@
+//nolint:godoclint,nonamedreturns // This legacy implementation intentionally relies on these patterns.
 package lang
 
 import (
@@ -56,7 +57,7 @@ func (fn *Func) Location() Location {
 }
 
 // Summary provides the one-sentence summary of the function's documentation
-// comment
+// comment.
 func (fn *Func) Summary() string {
 	return extractSummary(fn.doc.Doc)
 }
@@ -100,7 +101,7 @@ func (fn *Func) Examples() (examples []*Example) {
 		examples = append(examples, NewExample(fn.cfg.Inc(1), name, example))
 	}
 
-	return
+	return examples
 }
 
 // Anchor produces anchor text for the func.
@@ -121,7 +122,7 @@ func (fn *Func) Anchor() string {
 
 func (fn *Func) rawRecv() string {
 	// remove type parameters
-	recv := strings.Split(fn.doc.Recv, "[")[0]
+	recv, _, _ := strings.Cut(fn.doc.Recv, "[")
 
 	if strings.HasPrefix(recv, "*") {
 		return recv[1:]

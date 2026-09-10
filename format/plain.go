@@ -1,17 +1,18 @@
+//nolint:mnd,revive,wrapcheck // This legacy implementation intentionally relies on these patterns.
 package format
 
 import (
 	"fmt"
 
-	"github.com/princjef/gomarkdoc/format/formatcore"
-	"github.com/princjef/gomarkdoc/lang"
+	"github.com/umats/gomarkdoc/format/formatcore"
+	"github.com/umats/gomarkdoc/lang"
 )
 
 // PlainMarkdown provides a Format which is compatible with the base Markdown
 // format specification.
 type PlainMarkdown struct{}
 
-// Bold converts the provided text to bold
+// Bold converts the provided text to bold.
 func (f *PlainMarkdown) Bold(text string) (string, error) {
 	return formatcore.Bold(text), nil
 }

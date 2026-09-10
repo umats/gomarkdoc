@@ -1,5 +1,7 @@
 // Package logger provides a simple console logger for reporting information
 // about execution to stderr.
+//
+//nolint:govet // This legacy implementation intentionally relies on these patterns.
 package logger
 
 import (
@@ -10,14 +12,14 @@ import (
 type (
 	// Logger provides basic logging capabilities at different logging levels.
 	Logger interface {
-		Debug(a ...interface{})
-		Debugf(format string, a ...interface{})
-		Info(a ...interface{})
-		Infof(format string, a ...interface{})
-		Warn(a ...interface{})
-		Warnf(format string, a ...interface{})
-		Error(a ...interface{})
-		Errorf(format string, a ...interface{})
+		Debug(a ...any)
+		Debugf(format string, a ...any)
+		Info(a ...any)
+		Infof(format string, a ...any)
+		Warn(a ...any)
+		Warnf(format string, a ...any)
+		Error(a ...any)
+		Errorf(format string, a ...any)
 	}
 
 	// Level defines valid logging levels for a Logger.
@@ -26,13 +28,13 @@ type (
 	// Option defines an option for configuring the logger.
 	Option func(opts *options)
 
-	// options defines options for configuring the logger
+	// options defines options for configuring the logger.
 	options struct {
-		fields map[string]interface{}
+		fields map[string]any
 	}
 )
 
-// Valid logging levels
+// Valid logging levels.
 const (
 	DebugLevel Level = iota + 1
 	InfoLevel
@@ -80,10 +82,10 @@ func New(level Level, opts ...Option) Logger {
 }
 
 // WithField sets the provided key/value pair for use on all logs.
-func WithField(key string, value interface{}) Option {
+func WithField(key string, value any) Option {
 	return func(opts *options) {
 		if opts.fields == nil {
-			opts.fields = make(map[string]interface{})
+			opts.fields = make(map[string]any)
 		}
 
 		opts.fields[key] = value

@@ -59,6 +59,8 @@
 // [Var] and and [VarB].
 //
 // [Outside Link]: https://golang.org/doc/articles/json_and_go.html
+//
+//nolint:gochecknoglobals // This legacy fixture documents package-level variables.
 package docs
 
 // Func is present in this file.
@@ -69,7 +71,7 @@ func Func(param int) int {
 // Type is a type in this file.
 type Type struct{}
 
-// TypeFunc is a func within a type in this file.
+// Func is a func within a type in this file.
 func (t *Type) Func() {}
 
 // Constant is a constant.
@@ -78,14 +80,14 @@ const Constant = 3
 // Var is a var.
 var Var = 2
 
-// This is a constant block
+// This is a constant block.
 const (
 	Const1 = 1
 	Const2 = 2
 	Const3 = 3
 )
 
-// This is a var block
+// This is a var block.
 var (
 	VarA = 'a'
 	VarB = 'b'

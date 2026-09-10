@@ -1,3 +1,4 @@
+//nolint:wrapcheck // This legacy implementation intentionally relies on these patterns.
 package format
 
 import (
@@ -7,8 +8,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/princjef/gomarkdoc/format/formatcore"
-	"github.com/princjef/gomarkdoc/lang"
+	"github.com/umats/gomarkdoc/format/formatcore"
+	"github.com/umats/gomarkdoc/lang"
 )
 
 // AzureDevOpsMarkdown provides a Format which is compatible with Azure
@@ -17,7 +18,7 @@ import (
 // https://docs.microsoft.com/en-us/azure/devops/project/wiki/markdown-guidance?view=azure-devops
 type AzureDevOpsMarkdown struct{}
 
-// Bold converts the provided text to bold
+// Bold converts the provided text to bold.
 func (f *AzureDevOpsMarkdown) Bold(text string) (string, error) {
 	return formatcore.Bold(text), nil
 }

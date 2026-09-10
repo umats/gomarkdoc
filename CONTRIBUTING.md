@@ -30,35 +30,35 @@ the [issues][] section of the repository to open an issue. Some guidelines:
 Do you have a bugfix for an issue, a new feature, or even a fix for a typo in
 the documentation? You should open a Pull Request! Some steps to follow:
 
-1.  If your change is a substantial addition or it will result in a breaking
+1. If your change is a substantial addition or it will result in a breaking
     change to the library, consider first [opening an issue](#issues) to dicuss
     the problem and the proposed solution.
 
-2.  [Fork the repository][github fork] if you haven't before
+2. [Fork the repository][github fork] if you haven't before
 
-3.  [Set up your development environment](#developer-setup) and make your
+3. [Set up your development environment](#developer-setup) and make your
     changes. Also be sure to add tests for your change.
 
-4.  When you're ready to push your changes, run `npm t` to lint, build and test
+4. When you're ready to push your changes, run `task preflight` to lint, build and test
     your code. Any failures here will cause your pull request's continuous
     integration to fail, so it's best to catch it early.
 
-5.  Once you've pushed your code into your fork, [open a pull request][new pull
+5. Once you've pushed your code into your fork, [open a pull request][new pull
     request] and follow the template to fill in the pull request information.
 
 ## Developer Setup
 
 ### Prerequisites
 
-- [Golang][] 1.13.x or later
-- [Mage][] 1.9.x or later
+- [Golang][] 1.26.x or later
+- [Task][] 3.x or later
 
 ### Setting Up
 
 You can verify that things are up and running properly by executing:
 
 ```
-mage test
+task test
 ```
 
 ### Testing
@@ -67,32 +67,32 @@ Once you have made a change, you'll want to make sure that all of the tests are
 passing. You can do so by running:
 
 ```
-mage test
+task test
 ```
 
 This will run tests and compute code coverage on the source code. You can view a
 detailed html coverage report by running:
 
 ```
-mage coverage
+task coverage
 ```
 
 You can also lint the code by running:
 
 ```
-mage lint
+task lint
 ```
 
 Finally, when you're ready to submit a change, you'll want to make sure that the
 documentation for this repository has been regenerated:
 
 ```
-mage doc
+task doc
 ```
 
-[issues]: https://github.com/princjef/gomarkdoc/issues
-[new pull request]: https://github.com/princjef/gomarkdoc/compare
+[issues]: https://github.com/umats/gomarkdoc/issues
+[new pull request]: https://github.com/umats/gomarkdoc/compare
 [github reactions]: https://blog.github.com/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/
 [github fork]: https://help.github.com/articles/fork-a-repo
 [golang]: https://golang.org/
-[mage]: https://magefile.org/
+[task]: https://taskfile.dev/

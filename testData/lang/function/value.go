@@ -1,3 +1,4 @@
+//nolint:gochecknoglobals // This legacy implementation intentionally relies on these patterns.
 package function
 
 // Variable is a package-level variable.

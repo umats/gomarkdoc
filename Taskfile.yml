@@ -1,0 +1,66 @@
+version: '3'
+
+tasks:
+  build:
+    cmds:
+      - go build -o ./bin/gomarkdoc ./cmd/gomarkdoc
+
+  test:
+    cmds:
+      - go test -count=1 -coverpkg=.,./cmd/...,./format/...,./lang/...,./logger/... -cover -coverprofile=coverage.txt ./...
+
+  coverage:
+    deps: [test]
+    cmds:
+      - go tool cover -html=coverage.txt
+
+  lint:
+    cmds:
+      - golangci-lint run --timeout 5m
+
+  generate:
+    cmds:
+      - go generate .
+
+  doc:
+    cmds:
+      - go run ./cmd/gomarkdoc .
+      - go run ./cmd/gomarkdoc --header "" --exclude-dirs . --exclude-dirs ./testData/... ./...
+
+  doc:verify:
+    cmds:
+      - go run ./cmd/gomarkdoc -c .
+      - go run ./cmd/gomarkdoc -c --header "" --exclude-dirs . --exclude-dirs ./testData/... ./...
+
+  test-docs:
+    dir: 'testData/{{.DIR}}'
+    vars:
+      OUTPUT: '{{ "{{" }}.Dir{{ "}}" }}/README-{{.FORMAT}}.md'
+    cmds:
+      - go run '{{.ROOT_DIR}}/cmd/gomarkdoc' -o '{{.OUTPUT}}' --format '{{.FORMAT}}' ./...
+    requires:
+      vars: [DIR, FORMAT]
+
+  regenerate-test-docs:
+    cmds:
+      - for: [docs, embed, generics, lang, nested, simple, tags, unexported, untagged]
+        task: test-docs
+        vars:
+          DIR: '{{.ITEM}}'
+          FORMAT: github
+      - for: [docs, embed, generics, lang, nested, simple, tags, unexported, untagged]
+        task: test-docs
+        vars:
+          DIR: '{{.ITEM}}'
+          FORMAT: plain
+      - for: [docs, embed, generics, lang, nested, simple, tags, unexported, untagged]
+        task: test-docs
+        vars:
+          DIR: '{{.ITEM}}'
+          FORMAT: azure-devops
+
+  preflight:
+    cmds:
+      - task: test
+      - task: lint
+      - task: build

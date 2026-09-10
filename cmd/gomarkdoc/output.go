@@ -1,3 +1,4 @@
+//nolint:gosec,govet,mnd,nilnil,staticcheck,wrapcheck // The CLI must preserve generated-document permissions.
 package main
 
 import (
@@ -10,11 +11,10 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/princjef/gomarkdoc"
-	"github.com/princjef/gomarkdoc/lang"
-	"github.com/princjef/gomarkdoc/logger"
-	"github.com/princjef/termdiff"
 	"github.com/sergi/go-diff/diffmatchpatch"
+	"github.com/umats/gomarkdoc"
+	"github.com/umats/gomarkdoc/lang"
+	"github.com/umats/gomarkdoc/logger"
 )
 
 func writeOutput(specs []*PackageSpec, opts commandOptions) error {
@@ -103,7 +103,7 @@ func writeFile(fileName string, text string) error {
 		}
 	}
 
-	if err := ioutil.WriteFile(fileName, []byte(text), 0664); err != nil {
+	if err := ioutil.WriteFile(fileName, []byte(text), 0o664); err != nil {
 		return fmt.Errorf("failed to write file %s: %w", fileName, err)
 	}
 
@@ -114,7 +114,7 @@ func checkFile(b *bytes.Buffer, path string) error {
 	checkErr := errors.New("output does not match current files. Did you forget to run gomarkdoc?")
 
 	fileContents, err := os.ReadFile(path)
-	if err == os.ErrNotExist {
+	if errors.Is(err, os.ErrNotExist) {
 		fileContents = []byte{}
 	} else if err != nil {
 		return fmt.Errorf("failed to open file %s for checking: %w", path, err)
@@ -134,15 +134,7 @@ func checkFile(b *bytes.Buffer, path string) error {
 	}
 
 	if len(filtered) != 0 {
-		diffs := termdiff.DiffsFromDiffMatchPatch(diff)
-		fmt.Fprintln(os.Stderr)
-		termdiff.Fprint(
-			os.Stderr,
-			path,
-			diffs,
-			termdiff.WithBeforeText("(expected)"),
-			termdiff.WithAfterText("(actual)"),
-		)
+		fmt.Fprintf(os.Stderr, "\n%s - (expected) (actual)\n%s\n", path, differ.DiffPrettyText(diff))
 		return checkErr
 	}
 

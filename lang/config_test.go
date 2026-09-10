@@ -1,3 +1,4 @@
+//nolint:testpackage // This legacy implementation intentionally relies on these patterns.
 package lang
 
 import (

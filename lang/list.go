@@ -35,7 +35,7 @@ func (l *List) Items() []*Item {
 	return l.items
 }
 
-// ItemKind identifies the kind of item
+// ItemKind identifies the kind of item.
 type ItemKind string
 
 const (
